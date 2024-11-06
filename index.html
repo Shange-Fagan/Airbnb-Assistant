@@ -29,7 +29,7 @@ a, button, input, select, iframe {
   text-align: center;
   /*color: teal;*/
   color: rgba(255, 255, 255, 0.5);
-  z-index: 1;
+  z-index: 22010;
 }
 
 #info {
@@ -61,7 +61,7 @@ a, button, input, select, iframe {
 	height: 60px;
       font-family: Monospace;
        text-align: center;
-      z-index: 9999;
+      z-index: 22011;
     
 }
 	  #searchTicker{
@@ -73,7 +73,7 @@ a, button, input, select, iframe {
 	height: 60px;
       font-family: Monospace;
        text-align: center;
-      z-index: 9999;
+      z-index: 22011;
     
 }
 	  #mobileTicker {
@@ -84,7 +84,7 @@ a, button, input, select, iframe {
       width: 100%;
       font-family: Monospace;
        text-align: center;
-      z-index: 10000;
+      z-index: 22011;
     
 }
 	  /* Responsive Ticker for Mobile */
@@ -154,7 +154,7 @@ a, button, input, select, iframe {
   /*z-index: 10;*/
   display: none; /* Hidden by default */
   pointer-events: auto; /* Ensure pointer events are enabled */
-  z-index: 10000; /* Make sure the label is above other elements */
+  z-index: 22010; /* Make sure the label is above other elements */
   /*background-color: rgba(255, 255, 255, 0.9);*/ /* Optional background for better visibility */
   /*overflow: hidden;*/ /* Hide any content that overflows */
 }
@@ -225,7 +225,7 @@ a, button, input, select, iframe {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  z-index: 20001; /* Ensure the close button is always on top */  /*display: flex;*/
+  z-index: 22011; /* Ensure the close button is always on top */  /*display: flex;*/
   display: none;
   justify-content: center;
   align-items: center;
@@ -283,7 +283,7 @@ a, button, input, select, iframe {
       /*border: 1px solid rgba(255, 255, 255, 0.25);*/
       /*border-radius: 8px;*/
       color: rgba(255, 255, 255, 0.75);
-      z-index: 10001;
+      z-index: 22011;
       cursor: pointer;
 	    border: 0px solid #e0e0e0; /* Border similar to Airbnb */
        background-color: rgba(255, 255, 255, 0.15);
@@ -309,12 +309,13 @@ a, button, input, select, iframe {
     background-color: rgba(255, 255, 255, 0.15);
     padding: 12px 0px; /* Reduce padding for a cleaner, compact look */
     /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/ /* Light shadow for depth */
-    z-index: 10001;
+    z-index: 22011;
 }
 
 /* Inputs and dropdowns styling */
-#header input, #header select {
-    font-size: 16px; /* Slightly smaller font size */
+/* Styling for the input field (From) */
+#from {
+  font-size: 16px; /* Slightly smaller font size */
     padding: 10px 15px; /* Padding inside inputs */
     border: 0px solid #ddd; /* Light gray border */
     background-color: rgba(255, 255, 255, 0.15);
@@ -323,12 +324,74 @@ a, button, input, select, iframe {
     width: 220px; /* Slightly smaller width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	color: rgba(255, 255, 255, 0.75);
-    width: 150px; /* Set width to auto */
+    width: 115px; /* Set width to auto */
     max-width: max-content; /* Ensure it adjusts based on the placeholder or content */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     white-space: nowrap; /* Prevent wrapping */
-}
-
+  }
+  #adults {
+  font-size: 16px; /* Slightly smaller font size */
+    padding: 10px 15px; /* Padding inside inputs */
+    border: 0px solid #ddd; /* Light gray border */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50px; /* Fully rounded corners for inputs */
+    margin-right: 10px; /* Spacing between input fields */
+    width: 220px; /* Slightly smaller width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, 0.75);
+    width: 80px; /* Set width to auto */
+    max-width: max-content; /* Ensure it adjusts based on the placeholder or content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* Prevent wrapping */
+  }
+/* Styling for other inputs (optional) */
+#where {
+  font-size: 16px; /* Slightly smaller font size */
+    padding: 10px 15px; /* Padding inside inputs */
+    border: 0px solid #ddd; /* Light gray border */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50px; /* Fully rounded corners for inputs */
+    margin-right: 10px; /* Spacing between input fields */
+    width: 220px; /* Slightly smaller width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, 0.75);
+    width: 75px; /* Set width to auto */
+    max-width: max-content; /* Ensure it adjusts based on the placeholder or content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  /* Styling for other inputs (optional) */
+#checkin, #checkout {
+  font-size: 16px; /* Slightly smaller font size */
+    padding: 10px 15px; /* Padding inside inputs */
+    border: 0px solid #ddd; /* Light gray border */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50px; /* Fully rounded corners for inputs */
+    margin-right: 10px; /* Spacing between input fields */
+    width: 220px; /* Slightly smaller width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, 0.75);
+    width: 135px; /* Set width to auto */
+    max-width: max-content; /* Ensure it adjusts based on the placeholder or content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  /* Styling for other inputs (optional) */
+#price_min, #price_max {
+  font-size: 16px; /* Slightly smaller font size */
+    padding: 10px 15px; /* Padding inside inputs */
+    border: 0px solid #ddd; /* Light gray border */
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50px; /* Fully rounded corners for inputs */
+    margin-right: 10px; /* Spacing between input fields */
+    width: 220px; /* Slightly smaller width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, 0.75);
+    width: 140px; /* Set width to auto */
+    max-width: max-content; /* Ensure it adjusts based on the placeholder or content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* Prevent wrapping */
+  }
 #header input:focus, #header select:focus {
     outline: none;
       box-shadow: 0 0 8px rgba(255, 56, 92, 0.8); /* Red outline for focus similar to Airbnb */
@@ -377,7 +440,7 @@ animation: pulseShadow 0.6s ease-in-out infinite alternate; /* Animation on hove
     max-width: 100%; /* Ensure responsiveness */
     flex-wrap: wrap; /* Wrap content if it overflows */
 	color: white;
-	z-index: 10002; /* Ensure the entire search section is clickable */
+	z-index: 22011; /* Ensure the entire search section is clickable */
 }
 	  
 #header .logo {
@@ -517,7 +580,7 @@ input[type="number"] {
   background-color: rgba(255, 255, 255, 0.15);
   padding: 45px 55px; /* Increase padding for more breathing space */
   border-radius: 15px; /* Slightly more rounded corners */
-  z-index: 10001; /* Ensure it appears above all other elements */
+  z-index: 22011; /* Ensure it appears above all other elements */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for better separation */
   backdrop-filter: blur(10px); /* Apply background blur effect */
   text-align: center; /* Center the text and elements inside the popup */
@@ -586,7 +649,7 @@ input[type="number"] {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
+  z-index: 22011;
   text-align: center;
   max-width: 400px;
   width: 100%;
@@ -616,7 +679,7 @@ input[type="number"] {
   color: rgba(255, 255, 255, 0.75); /* Keep the light gray text color */
   background-color: rgba(255, 255, 255, 0.15); /* Transparent background with slight white tint */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  z-index: 10001;
+  z-index: 22011;
 }
 
 #regionSelectBtn:hover {
@@ -634,14 +697,14 @@ input[type="number"] {
   position: absolute; /* Adjust positioning */
   top: 200px; /* Adjust based on your layout */
   right: 50px; /* Adjust based on your layout */
-  z-index: 10002; /* Ensure it is visible above other elements */
+  z-index: 22011; /* Ensure it is visible above other elements */
 }
 	  
 #regionSelectDropdown:hover {
   background-color: rgba(245, 245, 245, 0.35);
 }
 	  #regionSelectBtn, #submitRegion {
-  z-index: 10001; /* Ensure these elements are interactive */
+  z-index:22011; /* Ensure these elements are interactive */
 }
 
 	  
@@ -660,7 +723,7 @@ iframe::-webkit-scrollbar {
     display: none;  
     justify-content: center;
     align-items: center;
-    z-index: 10001; /* Ensure it's on top of everything */
+    z-index: 22011; /* Ensure it's on top of everything */
   }
 	  #newsOverlaynighttheme {
     position: absolute;
@@ -674,7 +737,7 @@ iframe::-webkit-scrollbar {
     display: none;  
     justify-content: center;
     align-items: center;
-    z-index: 10001; /* Ensure it's on top of everything */
+    z-index: 22010; /* Ensure it's on top of everything */
   }
   
   #newsIframe {
@@ -702,7 +765,7 @@ iframe::-webkit-scrollbar {
       /*border: 1px solid rgba(255, 255, 255, 0.25);*/
       /*border-radius: 8px;*/
       color: rgba(255, 255, 255, 0.75);
-      z-index: 10001; /* Higher than the iframe */
+      z-index: 22011; /* Higher than the iframe */
       cursor: pointer;
 	/*z-index: 9999;*/
      /*cursor: pointer;*/
@@ -732,7 +795,7 @@ iframe::-webkit-scrollbar {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  z-index: 10002;
+  z-index: 22011;
   /*display: flex;*/
   display: none;
   justify-content: center;
@@ -748,7 +811,7 @@ iframe::-webkit-scrollbar {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10002;
+  z-index: 22011;
   width: 50px; /* Adjust as needed */
   height: 50px;
 	display: none;
@@ -814,14 +877,16 @@ background-size: 10px; *//* Adjust this as needed */
   border-radius: 25px; /* Rounded corners for the select box */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
   appearance: none; /* Removes the default arrow */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="rgba(255, 255, 255, 0.75)"/></svg>');
+  /*background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="rgba(255, 255, 255, 0.75)"/></svg>');
   background-repeat: no-repeat;
   background-position: right 15px center; /* Adjusted to move the arrow down */
-  background-size: 12px; /* Adjust the size of the arrow */
+  /*background-size: 12px; /* Adjust the size of the arrow */
   cursor: pointer;
-  z-index: 10001;
+  z-index: 22011;
 }
 	  #airbnbSelector {
+  appearance: none; /* Remove default appearance */
+  -webkit-appearance: none; /* For Safari */
   position: absolute;
   right: 15px;
   top: 320px;
@@ -833,24 +898,13 @@ background-size: 10px; *//* Adjust this as needed */
   border-radius: 25px; /* Rounded corners for the select box */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
   appearance: none; /* Removes the default arrow */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="rgba(255, 255, 255, 0.75)"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 15px center; /* Adjusted to move the arrow down */
-  background-size: 12px; /* Adjust the size of the arrow */
   cursor: pointer;
-  z-index: 10001;
+  z-index: 22011;
+  width: 175px;
 }
 	  /* Optional: Ensures the arrow is moved down without changing the default */
 select::-ms-expand {
   display: none; /* Hide the arrow in IE/Edge */
-}
-
-select:after {
-  content: '\25BC'; /* Adds a downwards arrow */
-  position: absolute;
-  right: 10px; /* Positions the arrow to the right */
-  top: 50%; /* Centers it vertically */
-  transform: translateY(-25%); /* Moves the arrow down slightly */
 }
 
 select:hover {
@@ -864,6 +918,8 @@ select:focus {
 }
 
 #priceCategorySelect {
+  appearance: none; /* Remove default appearance */
+  -webkit-appearance: none; /* For Safari */
   position: absolute;
   right: 15px;
   top: 280px;
@@ -875,12 +931,9 @@ select:focus {
   border-radius: 25px; /* Rounded corners for the select box */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
   appearance: none; /* Removes the default arrow */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="rgba(255, 255, 255, 0.75)"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 15px center; /* Adjusted to move the arrow down */
-  background-size: 12px; /* Adjust the size of the arrow */
   cursor: pointer;
-  z-index: 10001;
+  z-index: 22011;
+  width: 117px;
 }
 /* Style the dropdown options */
 select option {
@@ -949,7 +1002,7 @@ overflow: hidden;
       text-align: center;
       padding: 5px 0;
       font-size: 0.6rem;
-      z-index: 1;
+      z-index: 22010;
       /*font-size: 0.9rem;*/
       /*z-index: 9999;*/
     }
@@ -988,23 +1041,8 @@ overflow: hidden;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10000;  /* Ensure it's in front of other elements if necessary */
+  z-index: 22010;  /* Ensure it's in front of other elements if necessary */
 		  float: right;
-}
-	  #globe-container canvas {
-  position: relative;
-  /*top: 0;
-  left: 0;*/
-  z-index: 20000;  /* Make sure the canvas is above any other elements */
-	overflow: hidden; /* Ensure the canvas doesn’t overflow */
-		  display: block !important;
-}
-	  
-	  #globe-container {
-    pointer-events: auto; /* Disable globe interactions */
-}
-	  #globe-container.disable-interaction {
-    pointer-events: none; /* Disable globe interactions */
 }
 
 	  /* UI buttons that must be clickable over the globe */
@@ -1033,7 +1071,7 @@ overflow: hidden;
     width: 0;  /* Initially 0 width */
     position: relative;
     transition: width 0.5s ease;  /* Smooth transition for width */
-    z-index: 20000;  /* Ensure it's in front of other elements if necessary */
+    z-index: 22000;  /* Ensure it's in front of other elements if necessary */
 	display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* This will ensure each item takes up equal space */
     gap: 15px; /* Add some spacing between the listings */
@@ -1050,24 +1088,132 @@ overflow: hidden;
     color: #000;
     cursor: pointer;
     display: none; /* Hidden initially */
-    z-index: 10002; /* Ensure it's on top of other elements */
+    z-index: 22011; /* Ensure it's on top of other elements */
 }
 
 .close-btn:hover {
     color: #ff385c; /* Highlight on hover */
 }  /* Style for each post */
 
-	  .post {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
+#globeContainer {
+  position: relative;  /* Set position to relative or absolute */
+  width: 100%;
+  height: 100%;
+  display: block !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 22011;  /* Ensure it's in front of other elements if necessary */
+}
+#globeContainer canvas {
+  position: absolute;
+  /*top: 0;
+  left: 0;*/
+  z-index: 22011;  /* Make sure the canvas is above any other elements */
+	/*overflow: hidden;*/ /* Ensure the canvas doesn’t overflow */
+		  display: block !important;
+      pointer-events: auto !important;
+      touch-action: auto !important;
 }
 
+/* Overlay container to hold posts, sits on the left side of the screen */
+#overlayContainer {
+  position: absolute;
+  top: 135px;
+  left: 15px;
+  width: 35%; /* Adjust width as per your requirement */
+  height: 72.5%;
+  padding: 20px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between the cards */
+  background-color: rgba(255, 255, 255, 0.15); /* Slight transparency */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  z-index: 22011; /* On top of the globe container */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on the right side */
+  box-sizing: border-box;
+}
+
+/* Styling for individual posts */
+.post {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Card-like shadow */
+  overflow: hidden;
+  text-align: left; /* Align text to the left */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+/* Image for each post */
 .post img {
-    max-width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* Control max height of the image */
+  object-fit: cover; /* Ensure the image fits within the space */
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+/* Title and other text elements */
+.post h3 {
+  font-size: 1.1rem; /* Slightly larger title */
+  margin: 10px 0;
+}
+
+.post p {
+  color: #555;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Add a guest favorite badge */
+.post .guest-favorite {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ff385c; /* Airbnb pink color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Rating and other text below the title */
+.post .details {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Button or link for each post */
+.post .view-link {
+  display: inline-block;
+  margin-top: auto; /* Push link to the bottom */
+  padding: 8px 12px;
+  background-color: #ff385c;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.post .view-link:hover {
+  background-color: #e03a56;
+}
+/* Scrollbar customization */
+#overlayContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+#overlayContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 
 #left-container::-webkit-scrollbar {
@@ -1078,7 +1224,11 @@ overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }        
-
+#overlayContainer.show {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 22011;
+}
 #left-container.show {
     width: 50%;  /* Expands to 50% smoothly */
 	display: block;
@@ -1095,20 +1245,22 @@ overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    z-index: 20000;
+    z-index: 22010;
 	position: absolute;
-    top: 55px;
+  top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #000;
+  border-left-color: rgba(255, 255, 255, 0.75);
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 @keyframes spin {
@@ -1119,8 +1271,78 @@ overflow: hidden;
 .spinner-text {
     margin-top: 10px;
     text-align: center;
-    color: black;
+    color: rgba(255, 255, 255, 0.75);
     font-size: 16px;
+}
+/* Full-screen opaque overlay */
+#loading-overlay {
+  width: 100vw;
+  display: block;
+  height: 100vh;
+  background: rgba(155, 155,155, 0.5);
+  opacity: 1;
+  transition: opacity 0.5s ease;  /* Smooth fade-out */
+  z-index: 22012;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-overlay.hidden {
+  display: none;  /* Hidden by default or after hiding */
+  visibility: hidden;  /* Ensure it's not visible */
+  position: fixed;  /* Keep it fixed if it was over the entire screen */
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Loader visibility settings */
+.active-loader {
+  display: block;
+}
+
+.inactive-loader {
+  display: none;
+}
+
+#loadingSpinner {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.spinner2 {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+div[style*="overflow: hidden; width: 769px; height: 640px; position: absolute; top: 0px; touch-action: none;"] {
+  display: none;
+  touch-action: all !important;
+}
+canvas[style="display: block; width: 769px; height: 640px;"]{
+  pointer-events: auto !important;
+}
+canvas element.style {
+    display: block !important;
+    width: 769px;
+    height: 640px;
+    pointer-events: all !important;
 }
 
 </style>
@@ -1128,9 +1350,27 @@ overflow: hidden;
      crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id="overlayContainer"style="display: none;">
+    <button id="closeBtn" class="close-btn">X</button>
+    <!-- First post -->
+    <div class="post">
+      <img src="your-image-url-1.jpg" alt="Post Title 1" />
+      <div class="guest-favorite">Guest favorite</div>
+      <h3>Post Title 1</h3>
+      <p class="details">Price per night, Location</p>
+      <p class="details">Dates available</p>
+      <p class="details">Rating: ★4.99</p>
+      <a href="#" class="view-link">View Listing</a>
+    </div>
+  </div>
+  <div id="globeContainer"></div>
+  <!-- Loading overlay with two loaders (visible by default) -->
+  <div id="loading-overlay">
+    <img id="loader1" src="js/Earth@1x-1.1s-200px-200px.svg" alt="Loading..." class="active-loader" />
+    <img id="loader2" src="js/Default@1x-1.0s-200px-200px (2).svg" alt="Loading..." class="inactive-loader" />
+</div>
 <div id="container">
 <div id="left-container" style="display: none;" class="split-screen-left"></div>
-<button id="closeBtn" class="close-btn">X</button>
 <div id="globe-container" class="split-screen-right"></div>
     </div>
   </div>
@@ -1149,7 +1389,8 @@ overflow: hidden;
   </footer>
 
 <div id="header">
-  <input type="text" id="where" name="destination" placeholder="Search destinations">
+  <input type="text" id="from" name="travel_from" placeholder="Departure Point">
+  <input type="text" id="where" name="destination" placeholder="Where to?">
   <input type="date" id="checkin" name="checkin" placeholder="Check-in date">
   <input type="date" id="checkout" name="checkout" placeholder="Check-out date">
   <input type="number" id="adults" name="adults" placeholder="Add guests">
@@ -1176,6 +1417,7 @@ overflow: hidden;
 	<!-- Add this dropdown for price categories -->
 	<select id="priceCategorySelect">
     <optgroup label="Region-Specific Categories">
+      <option value="disabled">Sort by (Region)📍</option>
         <option value="popular">Most Popular (by Region)📍</option>
         <option value="cheapest">Cheapest (Region)📍</option>
         <option value="midPrice">Mid Price (Region)📍</option>
@@ -1184,6 +1426,7 @@ overflow: hidden;
 		</select>
 		<select id="airbnbSelector">
     <optgroup label="World Categories">
+      <option value="disabled">Sort by (Across the World) 🌍</option>
         <option value="general">Most Popular (Across the World)🌍</option>
         <option value="cheapest">Cheapest🌍</option>
         <option value="midPrice">Mid Price🌍</option>
@@ -1196,7 +1439,7 @@ overflow: hidden;
 <div id="confirmationMessage" style="display: none;">
   <h2>Thank you</h2>
   <p>
-    Please enter the details of your travel above, and we'll do our best to find the right airbnbs tailored to your needs, or feel free to browse the best airbnbs around the world, You can filter by price range and region using the buttons above.
+    Please enter the details of your travel above, and we'll do our best to find the airbnbs tailored to your needs, or feel free to browse the best airbnbs around the world, You can filter by price range and region using the buttons above.
   </p>
 </div>
 
@@ -1233,14 +1476,7 @@ overflow: hidden;
 ></iframe>
 
 
-<script>
-  document.getElementById('searchBtn').addEventListener('click', function() {
-    // Hide the dayTicker and show the searchTicker
-    document.getElementById('dayTicker').style.display = 'none';
-    document.getElementById('nightTicker').style.display = 'none';
-    document.getElementById('searchTicker').style.display = 'block';
-  });
-</script>
+
   <!-- Marker Labels (Will be dynamically generated) -->
   <div id="labels-container"></div>
   <div id="loadingIcon" class="loading-spinner"></div>
@@ -1257,6 +1493,8 @@ overflow: hidden;
   }
   </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script>
   // Function to toggle the visibility of the region select dropdown when clicking the button
 	document.addEventListener("DOMContentLoaded", function() {
@@ -1286,6 +1524,74 @@ overflow: hidden;
   });
 });
 </script>
+
+<script type="x-shader/x-vertex" id="vertexShader">
+  varying vec2 vUv;
+varying vec3 vNormal;
+varying vec3 vp;
+varying vec3 vPositionNormal;
+void main(void){
+  vUv = uv;
+  vNormal = normalize( normalMatrix * normal );
+  vp = position;
+  vPositionNormal = normalize(( modelViewMatrix * vec4(position, 1.0) ).xyz);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+}
+</script>
+<script type="x-shader/x-fragment" id="fragmentShader">
+  uniform vec3 glowColor;
+uniform float bias;
+uniform float power;
+uniform float time;
+varying vec3 vp;
+varying vec3 vNormal;
+varying vec3 vPositionNormal;
+uniform float scale;
+
+uniform sampler2D map;
+
+varying vec2 vUv;
+
+void main(void){
+  float a = pow( bias + scale * abs(dot(vNormal, vPositionNormal)), power );
+  if(vp.y > time && vp.y < time + 20.0) {
+    float t =  smoothstep(0.0, 0.8,  (1.0 - abs(0.5 - (vp.y - time) / 20.0)) / 3.0  );
+    gl_FragColor = mix(gl_FragColor, vec4(glowColor, 1.0), t * t );
+  }
+  gl_FragColor = mix(gl_FragColor, vec4( glowColor, 1.0 ), a);
+  float b = 0.8;
+  gl_FragColor = gl_FragColor + texture2D( map, vUv );
+}
+</script>
+<script type="x-shader/x-vertex" id="aeroVertexShader">
+  varying vec3	vVertexWorldPosition;
+varying vec3	vVertexNormal;
+varying vec4	vFragColor;
+void main(){
+vVertexNormal	= normalize(normalMatrix * normal);
+vVertexWorldPosition	= (modelMatrix * vec4(position, 1.0)).xyz;
+gl_Position	= projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+</script>
+<script type="x-shader/x-fragment" id="aeroFragmentShader">
+  uniform vec3	glowColor;
+uniform float	coeficient;
+uniform float	power;
+
+varying vec3	vVertexNormal;
+varying vec3	vVertexWorldPosition;
+
+varying vec4	vFragColor;
+
+void main(){
+vec3 worldCameraToVertex = vVertexWorldPosition - cameraPosition;
+vec3 viewCameraToVertex	= (viewMatrix * vec4(worldCameraToVertex, 0.0)).xyz;
+viewCameraToVertex= normalize(viewCameraToVertex); 
+float intensity	= pow(coeficient + dot(vVertexNormal, viewCameraToVertex), power);
+gl_FragColor = vec4(glowColor, intensity);
+}
+</script>
+
 
 	
 <button id="toggleButton">Switch to Night</button>
@@ -1317,16 +1623,143 @@ overflow: hidden;
     import { RGBELoader } from 'https://unpkg.com/three@0.136.0/examples/jsm/loaders/RGBELoader.js';
 	  // Import necessary post-processing modules
 import { EffectComposer } from 'https://unpkg.com/three@0.136.0/examples/jsm/postprocessing/EffectComposer.js?v=1';
-import { RenderPass } from 'https://unpkg.com/three@0.136.0/examples/jsm/postprocessing/RenderPass.js?v=1';
-import { UnrealBloomPass } from 'https://unpkg.com/three@0.136.0/examples/jsm/postprocessing/UnrealBloomPass.js?v=1';
-
+//import { RenderPass } from 'https://unpkg.com/three@0.136.0/examples/jsm/postprocessing/RenderPass.js?v=1';
+//import { UnrealBloomPass } from 'https://unpkg.com/three@0.136.0/examples/jsm/postprocessing/UnrealBloomPass.js?v=1';
   
   // Scene Setup
   const scene = new THREE.Scene();
   /*const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 2000);*/
   let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
   camera.position.set(20, 0.5, 15).setLength(25);
-	  
+
+	  // Hide the spinner after globe and scene are ready
+//window.addEventListener('load', () => {
+  //document.getElementById('loadingSpinner').style.display = 'none';
+//});
+// Function to switch between loaders
+// Function to show the second loader when the page is almost done
+// Function to switch from the first loader to the second loader after 5 seconds
+function showSecondLoader() {
+    const loader1 = document.getElementById("loader1");
+    const loader2 = document.getElementById("loader2");
+
+    // Hide the first loader and show the second loader
+    loader1.classList.remove("active-loader");
+    loader1.classList.add("inactive-loader");
+
+    loader2.classList.remove("inactive-loader");
+    loader2.classList.add("active-loader");
+
+    // After 2 more seconds, hide the loader and show the main content
+    setTimeout(hideLoader, 5000);  // Wait for 2 seconds before hiding the loader
+}
+
+// Function to hide the loader and show the main content
+function hideLoader() {
+    const overlay = document.getElementById("loading-overlay");
+
+    // Add a class that triggers the fade-out
+    overlay.classList.add('hidden');
+
+    // After the fade-out is done, set display to 'none' to remove it from the document flow
+    setTimeout(() => {
+        overlay.style.display = 'none';
+
+// Ensure it doesn't take up space or interfere with the layout
+overlay.style.visibility = "hidden";
+overlay.style.pointerEvents = "none"; 
+    }, 5000);  // Match the transition time in your CSS
+}
+
+document.getElementById('globeContainer').addEventListener('click', function() {
+   console.log('Globe clicked!');
+});
+
+
+// Start loading process as soon as the page starts loading
+// Use window.onload to ensure the script runs when the page is fully loaded
+  window.onload = function () {
+    // Show the first loader for 5 seconds, then switch to the second loader
+    setTimeout(showSecondLoader, 5000);  // Wait 5 seconds before switching to the second loader
+  };
+
+
+const earthRadius = 5.1; // Adjust this to match your globe's size
+const textureLoader = new THREE.TextureLoader();
+const dayTexture = textureLoader.load("js/Earth_Diffuse.jpg");
+const bumpMap = textureLoader.load("//unpkg.com/three-globe/example/img/earth-topology.png");
+const normalMap = textureLoader.load('js/Earth_Normal.jpg'); // Use a realistic normal map
+const specularMap = textureLoader.load("js/Earth_Specular.jpg");
+const earthMaterial = new THREE.ShaderMaterial({
+  uniforms: {
+    // Day texture, bump map, normal map, specular map, etc.
+    map: { value: dayTexture },
+    bumpMap: { value: bumpMap },
+    normalMap: { value: normalMap },
+    specularMap: { value: specularMap },
+    bumpScale: { value: 0.05 },
+    specularColor: { value: new THREE.Color('grey') },  // Specular color
+    shininess: { value: 15 },
+    // Custom uniforms for glow, scale, bias, etc.
+    glowColor: { value: new THREE.Color(0x0cd1eb) },  // Glow color
+    scale: { type: "f", value: -1.0 },  // Scale for glow
+    bias: { type: "f", value: 1.0 },  // Bias for glow effect
+    power: { type: "f", value: 3.3 },  // Power of glow intensity
+    time: { type: "f", value: 0 },  // Time for animation effects
+    isHover: { value: false },  // Whether the globe is being hovered over
+  },
+      vertexShader: document.getElementById('vertexShader').textContent,
+      fragmentShader: document.getElementById('fragmentShader').textContent,
+    });
+    let globe2;
+    function createEarthGlow() {
+    const R = earthRadius
+    const texture2 = textureLoader.load("./glow.png");
+
+    const spriteMaterial = new THREE.SpriteMaterial({
+      map: texture2,
+      color: 0x4390d1,
+      transparent: true,
+      opacity: 0.7,
+      depthWrite: false,
+    });
+    const sprite = new THREE.Sprite(spriteMaterial);
+    sprite.scale.set(R * 3.0, R * 3.0, 1);
+    globe2.add(sprite);
+  };
+  function createEarthAperture() {
+    const AeroSphere = {
+      uniforms: {
+        coeficient: {
+          value: 1.0,
+        },
+        power: {
+          value: 3,
+        },
+        glowColor: {
+          value: new THREE.Color(0x4390d1),
+        },
+      },
+      vertexShader: document.getElementById('aeroVertexShader').textContent,
+      fragmentShader: document.getElementById('aeroFragmentShader').textContent,
+    };
+  const apmaterial = new THREE.ShaderMaterial({
+      uniforms: AeroSphere.uniforms,
+      vertexShader: AeroSphere.vertexShader,
+      fragmentShader: AeroSphere.fragmentShader,
+      blending: THREE.NormalBlending,
+      transparent: true,
+      depthWrite: false,
+    });
+    // Setting the radius, width segments, and height segments
+const sphere = new THREE.SphereGeometry(
+  earthRadius,  // radius
+  128.1,        // widthSegments
+  128.1         // heightSegments
+);
+    const mesh = new THREE.Mesh(sphere, apmaterial);
+     globe2.add(mesh);
+  }
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   //renderer.setSize(innerWidth, innerHeight);
   //renderer.setSize(window.innerWidth, window.innerHeight);
@@ -1352,6 +1785,7 @@ import { UnrealBloomPass } from 'https://unpkg.com/three@0.136.0/examples/jsm/po
   controls.maxDistance = 25;
   controls.autoRotate = true;
   controls.autoRotateSpeed = 0.5;
+  controls.enabled = true;
 
 
    // Lighting - Reduced intensity to reduce glare
@@ -1576,8 +2010,8 @@ function animateCameraPan(x, y, z, zoomLevel) {
         })
         .start();
 }*/
-const earthRadius = 5.1; // Adjust this to match your globe's size
-const textureLoader = new THREE.TextureLoader();
+//const earthRadius = 5.1; // Adjust this to match your globe's size
+//const textureLoader = new THREE.TextureLoader();
 
 	  /*const cloudTexture2 = textureLoader.load("js/Earth_Cloud.jpg");
 	  const cloudGeometry = new THREE.SphereGeometry(earthRadius * 1.005, 64, 64);
@@ -1849,7 +2283,7 @@ const nightbackgroundTexture = new THREE.CanvasTexture(canvas2);
 	  // Load Textures
   //const textureLoader = new THREE.TextureLoader();
   //const dayTexture = textureLoader.load("//unpkg.com/three-globe/example/img/earth-blue-marble.jpg");
-	 const dayTexture = textureLoader.load("js/Earth_Diffuse.jpg");
+	 //const dayTexture = textureLoader.load("js/Earth_Diffuse.jpg");
 //const dayTexture = textureLoader.load("https://github.com/Shange-Fagan/Airbnb-Assistant/releases/download/pictures_for_earth_texture_high_res/world_shaded_43k.jpg");
     //const dayTexture = textureLoader.load("textures/earth-blue-marble-with-clouds.jpeg");
 //const dayTexture = textureLoader.load("textures/8k_earth_daymap.jpg");
@@ -1857,11 +2291,11 @@ const nightbackgroundTexture = new THREE.CanvasTexture(canvas2);
 	  const nightTexture = textureLoader.load("js/Earth_Night.jpg");
 	  //const nightTexture = textureLoader.load("https://github.com/Shange-Fagan/Airbnb-Assistant/releases/download/pictures_for_earth_texture/earth-night-16k.jpg");
 	  //const nightTexture = textureLoader.load("textures/8k_earth_nightmap.jpg");
-  const bumpMap = textureLoader.load("//unpkg.com/three-globe/example/img/earth-topology.png");
+  //const bumpMap = textureLoader.load("//unpkg.com/three-globe/example/img/earth-topology.png");
   //const specularMap = textureLoader.load("//unpkg.com/three-globe/example/img/earth-water.png");
-	  const specularMap = textureLoader.load("js/Earth_Specular.jpg");
+	  //const specularMap = textureLoader.load("js/Earth_Specular.jpg");
 const dayBumpMap = textureLoader.load("//unpkg.com/three-globe/example/img/earth-topology.png");
-	  const normalMap = textureLoader.load('js/Earth_Normal.jpg'); // Use a realistic normal map
+	  //const normalMap = textureLoader.load('js/Earth_Normal.jpg'); // Use a realistic normal map
 const nightBumpMap = textureLoader.load("//unpkg.com/three-globe/example/img/earth-topology.png");
 
 	  //const textureLoader = new THREE.TextureLoader();
@@ -2034,7 +2468,8 @@ nightTexture.anisotropy = renderer.capabilities.getMaxAnisotropy(); // Increases
       .start();
     
     // Update globe and scene for night
-    globe2.material.map = nightTexture;
+    //globe2.material.map = nightTexture;
+    earthMaterial.uniforms.map.value = nightTexture;
     scene.background = nightbackgroundTexture;
     scene.remove(cloudMesh);  // Remove clouds for night
   markerMaterial.color.set(nightmarkerMaterial);
@@ -2059,7 +2494,8 @@ nightTexture.anisotropy = renderer.capabilities.getMaxAnisotropy(); // Increases
       .start();
 
     // Update globe and scene for day
-    globe2.material.map = dayTexture;
+    earthMaterial.uniforms.map.value = dayTexture;
+    //globe2.material.map = dayTexture;
     scene.background = daybackgroundTexture;
     scene.add(cloudMesh);  // Add clouds for day
   markerMaterial.color.set(daymarkerMaterial);
@@ -2070,6 +2506,7 @@ nightTexture.anisotropy = renderer.capabilities.getMaxAnisotropy(); // Increases
 
   // Ensure globe material updates
   globe2.material.needsUpdate = true;
+  earthMaterial.needsUpdate = true;
 
   // Toggle the `isDay` state after the transition
   isDay = !isDay;
@@ -2216,8 +2653,6 @@ normalMap: normalMap,
   /*scene.add(atmosphere);*/
   scene.add(globe);
   //scene.add(globe2);
-
-let globe2;
 
 /*const genericMarkers = [
   { id: 1, position: [5.1, 1.2, 1.5], region: 'africa' },
@@ -2438,16 +2873,16 @@ function getRegionCoordinates(region) {
 	  // Markers Data
 const markersData = [
   // Each marker has [radius, phi, theta] format for spherical positioning
-  { id: 1, position: [5.1, 1.2, 1.5], iframeSrc: "https://rss.app/embed/v1/list/hKdSIKMe0o5AmG18" },
-  { id: 2, position: [5.1, 0.7, 1.8], iframeSrc: "https://rss.app/embed/v1/list/sum7m4TJWVJk8HMN" },
+  { id: 1, region: 'africa', position: [5.1, 1.2, 1.5], iframeSrc: "https://rss.app/embed/v1/list/hKdSIKMe0o5AmG18" },
+  { id: 2, region: 'europe', position: [5.1, 0.7, 1.8], iframeSrc: "https://rss.app/embed/v1/list/sum7m4TJWVJk8HMN" },
   // Add other markers here...
-  { id: 3, position: [5.1, 0.9, 0], iframeSrc: "https://rss.app/embed/v1/list/chAYVOo3llbQzNLo" },
-  { id: 4, position: [5.1, 1.6, 0.4], iframeSrc: "https://rss.app/embed/v1/list/DP9kzxo2dohbbgST" },
-  { id: 5, position: [5.1, 1, 2.3],iframeSrc: "https://rss.app/embed/v1/list/JCYAnBzooyfhbDvO" },
-  { id: 6, position: [5.1, 0.9, 3], iframeSrc: "https://rss.app/embed/v1/list/pUeauCbzsXuVe3eC" },
-  { id: 7, position: [5.1, 0.9, 4], iframeSrc: "https://rss.app/embed/v1/list/d6hKxeycgIlya2NK" },
-  { id: 8, position: [5.1, 1.2, 0.2], iframeSrc: "https://rss.app/embed/v1/list/qvlJz8EBa0yKiH2i" },
-  { id: 9, position: [5.1, 0.6, 1.45], iframeSrc: "https://rss.app/embed/v1/list/VQIhB1FM0tC17q5Y" },
+  { id: 3, region: 'america', position: [5.1, 0.9, 0], iframeSrc: "https://rss.app/embed/v1/list/chAYVOo3llbQzNLo" },
+  { id: 4, region: 'south america', position: [5.1, 1.6, 0.4], iframeSrc: "https://rss.app/embed/v1/list/DP9kzxo2dohbbgST" },
+  { id: 5, region: 'middle east', position: [5.1, 1, 2.3],iframeSrc: "https://rss.app/embed/v1/list/JCYAnBzooyfhbDvO" },
+  { id: 6, region: 'asia', position: [5.1, 0.9, 3], iframeSrc: "https://rss.app/embed/v1/list/pUeauCbzsXuVe3eC" },
+  { id: 7, region: 'japan', position: [5.1, 0.9, 4], iframeSrc: "https://rss.app/embed/v1/list/d6hKxeycgIlya2NK" },
+  { id: 8, region: 'carribbean', position: [5.1, 1.2, 0.2], iframeSrc: "https://rss.app/embed/v1/list/qvlJz8EBa0yKiH2i" },
+  { id: 9, region: 'uk', position: [5.1, 0.6, 1.45], iframeSrc: "https://rss.app/embed/v1/list/VQIhB1FM0tC17q5Y" },
 ];
 /*const genericMarkers = [
   { id: 1, position: [5.1, 1.2, 1.5], region: 'africa' },
@@ -2469,30 +2904,31 @@ const markersData = [
   const z = radius * Math.sin(phi) * Math.sin(theta);
   return { x, y, z };
 }*/
-	  function latLonToVector3(lat, lng, radius) {
-  const phi = (90 - lat) * (Math.PI / 180);  // Latitude to radians
-  const theta = (lng + 180) * (Math.PI / 180);  // Longitude to radians
-  
-  // Ensure the radius is calculated properly
-  const x = -(radius * Math.sin(phi) * Math.cos(theta));  // X position
-  const y = radius * Math.cos(phi);  // Y position
-  const z = radius * Math.sin(phi) * Math.sin(theta);  // Z position
+function latLngToVector3(lat, lng, radius) {
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lng + 180) * (Math.PI / 180);
 
-  return { x, y, z };
+  const x = -(radius * Math.sin(phi) * Math.cos(theta));
+  const y = radius * Math.cos(phi);
+  const z = radius * Math.sin(phi) * Math.sin(theta);
+
+  return new THREE.Vector3(x, y, z);
 }
 
 
-globe2 = new THREE.Mesh(geometry, material2);
+globe2 = new THREE.Mesh(geometry, earthMaterial);
 // Initialize the globe and markers
 
   renderer.setSize(window.innerWidth, window.innerHeight);
-  document.getElementById('globe-container').appendChild(renderer.domElement);
+  document.getElementById('globeContainer').appendChild(renderer.domElement);
 
   //globe2 = new THREE.Mesh(geometry, material2);
   scene.add(globe2);
+  createEarthGlow();
+  createEarthAperture();
 	 const dummy = new THREE.Object3D();
 	  const markerGeometry = new THREE.PlaneGeometry(1.1, 1.1); // Adjust size as needed
-const markerMaterial = new THREE.MeshBasicMaterial({
+    const markerMaterial = new THREE.MeshBasicMaterial({
     color: daymarkerMaterial,
     onBeforeCompile: (shader) => {
       shader.uniforms.time = globalUniforms.time;
@@ -2537,8 +2973,13 @@ function loadGenericMarkers(markersData) {
     console.warn('Scene or markers data not available');
     return;
   }
+  console.log('Loading generic markers...');
 // Marker Geometry and Material
-const markerGeometry = new THREE.PlaneGeometry(1.1, 1.1); // Adjust size as needed
+// Adjust marker size dynamically based on zoom level
+
+  // Create the marker geometry and material
+  const markerGeometry = new THREE.PlaneGeometry(1.1, 1.1);
+//const markerGeometry = new THREE.PlaneGeometry(1.1, 1.1); // Adjust size as needed
 const markerMaterial = new THREE.MeshBasicMaterial({
     color: daymarkerMaterial,
     onBeforeCompile: (shader) => {
@@ -2576,6 +3017,9 @@ const markerMaterial = new THREE.MeshBasicMaterial({
     },
   });
   markerMaterial.defines = { USE_UV: '' };
+  console.log('Creating generic markers...');
+  // Create an object to keep track of generic markers for each region
+  window.genericMarkers = window.genericMarkers || {};
 
 if (window.innerWidth <= 768) {
   markerGeometry.scale(1.25, 1.25, 1.25); // Scale for mobile
@@ -2593,14 +3037,27 @@ markersData.forEach((data, index) => {
   dummy.lookAt(dummy.position.clone().setLength(radius + 1)); // Ensure marker faces outward
   dummy.updateMatrix();
   markers.setMatrixAt(index, dummy.matrix);
+// Log marker data
+console.log(`Marker ${index}: radius=${radius}, phi=${phi}, theta=${theta}`);
 
   data.worldPosition = dummy.position.clone(); // Store position for interaction (optional)
 });
-
+// Log region and saving marker
+const region = markersData[0]?.region; // Assuming markersData has region info
+  if (region) {
+    console.log(`Saving generic markers for region: ${region}`);
+    window.genericMarkers[region] = markers;
+  } else {
+    console.warn('Region data not found in markersData');
+  }
+// Save the marker to the genericMarkers object based on region
+genericMarkers[markersData.region] = markers;
 // Add the markers to the scene
 scene.add(markers);
 }
-	 loadGenericMarkers(markersData);
+
+  
+  loadGenericMarkers(markersData);
 // Labels, Raycasting, and Interactions (leave as is from your original logic)
 // Assuming each marker has a reference in the HTML list and vice versa
 function highlightMarker(markerId) {
@@ -2685,11 +3142,11 @@ async function loadDetailedMarkers(regionCoordinates) {
   // Iterate through the fetched markers and add them to the scene
   detailedMarkers.forEach((marker, index) => {
     const { lat, lng } = marker;  // Use latitude and longitude
-    const { x, y, z } = latLonToVector3(lat, lng, earthRadius); // Convert to 3D coordinates
+    const { x, y, z } = latLngToVector3(lat, lng, earthRadius); // Convert to 3D coordinates
 
     // Create individual marker geometry and material
     const markerGeometry = new THREE.PlaneGeometry(0.7, 0.7);  // Use smaller size for detailed markers
-    const markerMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00, side: THREE.DoubleSide });
+    const markerMaterial = new THREE.MeshBasicMaterial({ color: 0xff385c, side: THREE.DoubleSide });
 
     // Optionally scale markers for mobile
     if (window.innerWidth <= 768) {
@@ -2714,7 +3171,22 @@ async function getDetailedMarkersForRegion(region) {
     const response = await fetch(`http://bnb-navigator.com/get-markers?region=${region}&category=${category}`, {
   method: 'GET',
   credentials: 'include',  // If you need cookies or credentials
-});
+}).then(response => response.json())
+  .then(markerLatLngs => {
+    // Assume 'map' is your initialized Google Map or Mapbox map object
+
+    // Loop through the marker data and add them to the map
+    markerLatLngs.forEach(marker => {
+      new Marker({
+        position: { lat: marker.lat, lng: marker.lng },  // Use the lat/lng coordinates
+        map: map,
+        title: 'Airbnb Marker'
+      });
+    });
+  })
+  .catch(err => {
+    console.error('Error fetching markers:', err);
+  });
     // Parse the JSON response to get the markers data
     const markersData = await response.json(); 
 console.log(response.json());
@@ -2728,9 +3200,22 @@ console.log(response.json());
 
 
 // Pan globe to a region
-function panGlobeToRegion(regionCoordinates) {
+let currentRegion = null; // Keep track of the current region
+
+// Function to hide a marker
+function hideMarker(marker) {
+  marker.visible = false;
+}
+
+// Function to show a marker
+function showMarker(marker) {
+  marker.visible = true;
+}
+// Pan globe to a region and handle marker visibility
+function panGlobeToRegion(regionCoordinates, region) {
   if (camera && controls) {
-    const { x, y, z } = latLonToVector3(regionCoordinates.lat, regionCoordinates.lng, 20);
+    console.log(`Panning to region: ${region}`);  // Log selected region
+    const { x, y, z } = latLngToVector3(regionCoordinates.lat, regionCoordinates.lng, 5.1);
     const targetPosition = new THREE.Vector3(x, y, z);
 
     new TWEEN.Tween(camera.position)
@@ -2738,15 +3223,35 @@ function panGlobeToRegion(regionCoordinates) {
       .easing(TWEEN.Easing.Cubic.InOut)
       .onUpdate(() => controls.update())
       .start();
-	  
-	  // Load markers for the specific region after panning is complete
+// Log camera movement
+console.log(`Camera moving to: x=${x}, y=${y}, z=${z}`);
+    // Hide the marker of the selected region after panning
     new TWEEN.Tween()
       .to({}, 2000)  // Add a delay equal to the camera pan
       .onComplete(() => {
-        loadDetailedMarkers(regionCoordinates);  // Load detailed markers for the region
-        loadGenericMarkers(markersData);  // Load generic markers
+        console.log(`Fetching and displaying detailed markers for region: ${region}`);
+        // Fetch and display detailed markers for the selected region
+        fetchMarkers(region);
+
+        // Hide the current region's marker
+        if (genericMarkers[region]) {
+          console.log(`Hiding generic marker for region: ${region}`);
+          hideMarker(genericMarkers[region]);
+        } else {
+          console.warn(`No generic marker found for region: ${region}`);
+        }
+
+        // If another region was previously selected, show its marker again
+        if (currentRegion && currentRegion !== region && genericMarkers[currentRegion]) {
+          console.log(`Showing generic marker for previously selected region: ${currentRegion}`);
+          showMarker(genericMarkers[currentRegion]);
+        }
+
+        currentRegion = region; // Update the currently selected region
       })
       .start();
+  } else {
+    console.error('Camera or controls are not defined');
   }
 }
 	  // Function to pan the globe and load markers based on a location search
@@ -3028,11 +3533,11 @@ document.getElementById('searchBtn').addEventListener('click', async function ()
     const priceMin = document.getElementById('price_min').value;
     const priceMax = document.getElementById('price_max').value;
 	
-    const inputs = document.querySelectorAll('#header input');
+    /*const inputs = document.querySelectorAll('#header input');
     inputs.forEach(input => {
         input.style.color = 'darkgrey';  // Change placeholder text to dark grey
-    });
-    document.getElementById('header').style.backgroundColor = 'white';  // Change header background to white
+    });*/
+    //document.getElementById('header').style.backgroundColor = 'white';  // Change header background to white
 	
     // Show the close button
     document.getElementById('closeBtn').style.display = 'block';
@@ -3047,39 +3552,68 @@ document.getElementById('searchBtn').addEventListener('click', async function ()
 document.getElementById('closeBtn').addEventListener('click', function () {
     // Hide the close button and the left container
     document.getElementById('closeBtn').style.display = 'none';
-    document.getElementById('leftContainer').style.display = 'none';
+    document.getElementById('overlayContainer').style.display = 'none';
 });
 
 
     // Show spinner and transition to split screen mode
-    const leftContainer = document.getElementById('left-container');
-    const globeContainer = document.getElementById('globe-container');
+    /*const leftContainer = document.getElementById('left-container');*/
+    const globeContainer = document.getElementById('globeContainer');
+    const overlay = document.getElementById('overlayContainer');
+    // Check if the overlayContainer exists
+    if (!overlay) {
+        console.error("Overlay container not found!");
+        return;
+    }
+    // Log to confirm the visibility change
+    console.log("Displaying overlay...");
 
+    // Use requestAnimationFrame to force a repaint
+    requestAnimationFrame(() => {
+        overlay.style.display = 'grid';
+        overlay.classList.add('show');
+    });
+
+    
+        overlay.innerHTML = `
+            <div class="spinner-container">
+                <div class="spinner"></div>
+                <p class="spinner-text">Starting the process...</p>
+            </div>
+        `;
+        function hideSpinnerContainer() {
+    const spinnerContainer = document.querySelector('.spinner-container');
+    if (spinnerContainer) {
+        spinnerContainer.style.display = 'none';  // Hide the spinner container
+    }
+}
+
+  
     // Show the spinner inside the left container
-    leftContainer.innerHTML = `
+    /*leftContainer.innerHTML = `
         <div class="spinner-container">
             <div class="spinner"></div>
             <p class="spinner-text">Starting the process...</p>
         </div>
     `;
     leftContainer.style.display = 'block'; // Ensure the left container is visible
+    
 
     // Shrink the globe-container to take only half the screen
     globeContainer.classList.add('split');
     leftContainer.classList.add('show'); // Show the left container
-
 	// Switch to split-screen layout
     leftContainer.style.width = '50%';
-    globeContainer.style.width = '50%';
+    globeContainer.style.width = '50%';*/
 
     // Call the resize function for Three.js
     //resizeThreeJS(); // Ensure Three.js canvas is resized properly
 
 	// Ensure Three.js globe resizes after the DOM update is complete
-    setTimeout(resizeThreeJS, 500); // Delay to ensure layout transition has completed
+    //setTimeout(resizeThreeJS, 500); // Delay to ensure layout transition has completed
 
 	// Function to resize the Three.js globe
-    function resizeThreeJS() {
+    /*function resizeThreeJS() {
         if (window.renderer && window.camera) {
             const newWidth = globeContainer.clientWidth;
             const newHeight = globeContainer.clientHeight;
@@ -3087,14 +3621,27 @@ document.getElementById('closeBtn').addEventListener('click', function () {
             window.camera.aspect = newWidth / newHeight;
             window.camera.updateProjectionMatrix();
         }
-    }
+    }*/
 
     // Update the spinner text to indicate visiting Airbnb
     updateSpinnerText("Visiting Airbnb site...");
 
     // Generate the Airbnb search URL
     // Base URL for Airbnb search
-    let searchUrl = `https://www.airbnb.com/s/${location}/homes?checkin=${checkin}&checkout=${checkout}&adults=${guests}`;
+    // Construct the initial Airbnb URL (without map bounds)
+  // Get today's date
+const today = new Date();
+const tomorrow = new Date();
+tomorrow.setDate(today.getDate() + 1);
+ // Get the first day of the current month
+const monthlyStartDate = new Date(today.getFullYear(), today.getMonth(), 1);
+
+// Get the end date three months from the current month
+const monthlyEndDate = new Date(today.getFullYear(), today.getMonth() + 3, 0); // 0 gives the last day of the previous month
+// Format the dates to YYYY-MM-DD
+const monthlyStart = monthlyStartDate.toISOString().split('T')[0];  // First day of current month
+const monthlyEnd = monthlyEndDate.toISOString().split('T')[0];  // Last day of the month 3 months from now
+    let searchUrl = `https://www.airbnb.com/s/${location}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&adults=2&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=${monthlyStart}&monthly_length=3&monthly_end_date=${monthlyEnd}&price_filter_input_type=0&channel=EXPLORE&date_picker_type=calendar&checkin=${checkin}&checkout=${checkout}&adults=${guests}&source=structured_search_input_header&search_type=unknown&price_filter_num_nights=1&drawer_open=true`;
 
     // Only add price_min and price_max if they have values
     if (priceMin && priceMin.trim() !== "") {
@@ -3107,13 +3654,13 @@ document.getElementById('closeBtn').addEventListener('click', function () {
     console.log('Generated searchUrl:', searchUrl);
 
 	// Disable globe interactions when the left container is scrolled
-    leftContainer.addEventListener('mouseenter', () => {
+    /*overlay.addEventListener('mouseenter', () => {
         globeContainer.classList.add('disable-interaction');
     });
 
-    leftContainer.addEventListener('mouseleave', () => {
+    overlay.addEventListener('mouseleave', () => {
         globeContainer.classList.remove('disable-interaction');
-    });
+    });*/
 
     // Update spinner text to indicate fetching data
     updateSpinnerText("Fetching Airbnb information...");
@@ -3127,7 +3674,8 @@ document.getElementById('closeBtn').addEventListener('click', function () {
 	console.log('Generated searchUrl:guests', guests);
 	console.log('Generated searchUrl:priceMin', priceMin);
 	console.log('Generated searchUrl:priceMax', priceMax);
-	console.log('Fetching data from:', `https://airbnb-assistant-658639f68fd7.herokuapp.com/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
+	console.log('Fetching data from:', `http://localhost:3000/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
+  hideSpinnerContainer();
 
 });
 
@@ -3138,17 +3686,21 @@ async function fetchAirbnbPosts(searchUrl) {
         updateSpinnerText("Scraping Airbnb listings...");
 
         const response = await fetch(`http://localhost:3000/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
-        const posts = await response.json();
+        const data = await response.json();
+         // Ensure that 'posts2' is an array before mapping
+         const posts2 = Array.isArray(data.posts2) ? data.posts2 : [];
 
-        console.log('Fetched posts:', posts);
+        console.log('Fetched posts:', data);
 
         // Update spinner text to indicate posts fetched
         updateSpinnerText("Displaying fetched listings...");
+// Call populateOverlay to display posts
+populateOverlay(posts2);
 
         // Display the posts on the webpage
-        const container = document.getElementById('left-container');
+       /* const container = document.getElementById('left-container');
         container.style.display = 'block';
-        container.innerHTML = posts.map(post => `
+        container.innerHTML = posts2.map(post => `
             <div class="post">
       	      <img src="${post.image}" alt="${post.title}" />
       	      <h3>${post.title}</h3>
@@ -3157,14 +3709,72 @@ async function fetchAirbnbPosts(searchUrl) {
 	      <p>Rating: ${post.rating_out_of_5_stars}</p>
 	      <a href="${post.link}" target="_blank" class="view-link">View Listing</a>
 	    </div>
-        `).join('');
+        `).join('');*/
+        function populateOverlay(posts2) {
+          const overlay = document.getElementById('overlayContainer');
+  overlay.innerHTML = '';  // Clear previous posts
 
-    } catch (error) {
+  posts2.forEach(post => {
+    const postDiv = document.createElement('div');
+    postDiv.classList.add('post');
+
+    // Add image
+    const img = document.createElement('img');
+    img.src = post.image;
+    img.alt = post.title;
+
+    // Add title
+    const title = document.createElement('h3');
+    title.textContent = post.title;
+
+    // Add subtitle
+    const details = document.createElement('p');
+    title.textContent = post.subtitle;
+
+    // Add details
+    const price = document.createElement('p');
+    details.textContent = post.listing_price_details; // Adjust this depending on the post structure
+
+    // Add title
+    const rating = document.createElement('p');
+    title.textContent = post.rating_out_of_5_stars;
+    // Append all elements to the postDiv
+    postDiv.appendChild(img);
+    postDiv.appendChild(title);
+    postDiv.appendChild(details);
+
+    // Append the postDiv to the overlay
+    overlay.appendChild(postDiv);
+  });
+}
+
+      } catch (error) {
         console.error('Error fetching posts:', error);
         // Update spinner text to indicate an error occurred
         updateSpinnerText("Error fetching Airbnb listings. Please try again.");
     }
 }
+document.querySelectorAll('.post-grid').forEach((item, index) => {
+    // Make sure `index` matches the corresponding marker
+    item.addEventListener('mouseover', function() {
+        if (markers[index]) {  // Check if the marker exists
+            markers[index].material.color.set(0x00ff00);  // Highlight the marker in green
+        }
+    });
+    
+    item.addEventListener('mouseout', function() {
+        if (markers[index]) {
+            markers[index].material.color.set(0xffffff);  // Reset the color when mouse leaves (default color)
+        }
+    });
+
+    item.addEventListener('click', function() {
+        if (markers[index]) {
+            markers[index].material.color.set(0xff385c);  // Set the marker color to red on click
+        }
+    });
+});
+
 	  // A lookup table for example (you can expand this)
 // Lookup table with expanded locations, including Jamaica
 /*const locations = {
@@ -3229,7 +3839,7 @@ async function fetchAirbnbPosts(searchUrl) {
     "jamaica": { lat: 18.1096, lng: -77.2975 } // Added Jamaica
 };*/
 
-	  const locations = {
+	  /*const locations = {
     "new york": { lat: 40.7128, lng: -74.0060, zoom: 2.5 },
     "los angeles": { lat: 34.0522, lng: -118.2437, zoom: 2.2 },
     "chicago": { lat: 41.8781, lng: -87.6298, zoom: 2.5 },
@@ -3323,7 +3933,104 @@ async function fetchAirbnbPosts(searchUrl) {
     "afghanistan": { lat: 33.9391, lng: 67.7100, zoom: 2.6 },
     "colombia": { lat: 4.5709, lng: -74.2973, zoom: 2.7 },
     "venezuela": { lat: 6.4238, lng: -66.5897, zoom: 2.7 }
+};*/
+const locations = {
+    "new york": { lat: 40.7128, lng: -74.0060, zoom: 1.4 },
+    "los angeles": { lat: 34.0522, lng: -118.2437, zoom: 1.4 },
+    "chicago": { lat: 41.8781, lng: -87.6298, zoom: 1.4 },
+    "miami": { lat: 25.7617, lng: -80.1918, zoom: 1.4 },
+    "san francisco": { lat: 37.7749, lng: -122.4194, zoom: 1.4 },
+    "washington dc": { lat: 38.9072, lng: -77.0369, zoom: 1.4 },
+    "london": { lat: 51.5074, lng: -0.1278, zoom: 1.4 },
+    "paris": { lat: 48.8566, lng: 2.3522, zoom: 1.4 },
+    "berlin": { lat: 52.5200, lng: 13.4050, zoom: 1.4 },
+    "rome": { lat: 41.9028, lng: 12.4964, zoom: 1.4 },
+    "madrid": { lat: 40.4168, lng: -3.7038, zoom: 1.4 },
+    "barcelona": { lat: 41.3851, lng: 2.1734, zoom: 1.4 },
+    "moscow": { lat: 55.7558, lng: 37.6173, zoom: 1.4 },
+    "tokyo": { lat: 35.6895, lng: 139.6917, zoom: 1.4 },
+    "beijing": { lat: 39.9042, lng: 116.4074, zoom: 1.4 },
+    "shanghai": { lat: 31.2304, lng: 121.4737, zoom: 1.4 },
+    "sydney": { lat: -33.8688, lng: 151.2093, zoom: 1.4 },
+    "melbourne": { lat: -37.8136, lng: 144.9631, zoom: 1.4 },
+    "rio de janeiro": { lat: -22.9068, lng: -43.1729, zoom: 1.4 },
+    "são paulo": { lat: -23.5505, lng: -46.6333, zoom: 1.4 },
+    "mexico city": { lat: 19.4326, lng: -99.1332, zoom: 1.4 },
+    "toronto": { lat: 43.651070, lng: -79.347015, zoom: 1.4 },
+    "vancouver": { lat: 49.2827, lng: -123.1207, zoom: 1.4 },
+    "montreal": { lat: 45.5017, lng: -73.5673, zoom: 1.4 },
+    "buenos aires": { lat: -34.6037, lng: -58.3816, zoom: 1.4 },
+    "cape town": { lat: -33.9249, lng: 18.4241, zoom: 1.4 },
+    "johannesburg": { lat: -26.2041, lng: 28.0473, zoom: 1.4 },
+    "cairo": { lat: 30.0444, lng: 31.2357, zoom: 1.4 },
+    "dubai": { lat: 25.2048, lng: 55.2708, zoom: 1.4 },
+    "istanbul": { lat: 41.0082, lng: 28.9784, zoom: 1.4 },
+    "delhi": { lat: 28.6139, lng: 77.2090, zoom: 1.4 },
+    "mumbai": { lat: 19.0760, lng: 72.8777, zoom: 1.4 },
+    "hong kong": { lat: 22.3193, lng: 114.1694, zoom: 1.4 },
+    "bangkok": { lat: 13.7563, lng: 100.5018, zoom: 1.4 },
+    "singapore": { lat: 1.3521, lng: 103.8198, zoom: 1.4 },
+    "kuala lumpur": { lat: 3.1390, lng: 101.6869, zoom: 1.4 },
+    "jakarta": { lat: -6.2088, lng: 106.8456, zoom: 1.4 },
+    "seoul": { lat: 37.5665, lng: 126.9780, zoom: 1.4 },
+    "lagos": { lat: 6.5244, lng: 3.3792, zoom: 1.4 },
+    "casablanca": { lat: 33.5731, lng: -7.5898, zoom: 1.4 },
+    "nairobi": { lat: -1.2864, lng: 36.8172, zoom: 1.4 },
+    "lima": { lat: -12.0464, lng: -77.0428, zoom: 1.4 },
+    "santiago": { lat: -33.4489, lng: -70.6693, zoom: 1.4 },
+    "athens": { lat: 37.9838, lng: 23.7275, zoom: 1.4 },
+    "lisbon": { lat: 38.7223, lng: -9.1393, zoom: 1.4 },
+    "vienna": { lat: 48.2082, lng: 16.3738, zoom: 1.4 },
+    "stockholm": { lat: 59.3293, lng: 18.0686, zoom: 1.4 },
+    "oslo": { lat: 59.9139, lng: 10.7522, zoom: 1.4 },
+    "helsinki": { lat: 60.1695, lng: 24.9354, zoom: 1.4 },
+    "warsaw": { lat: 52.2297, lng: 21.0122, zoom: 1.4 },
+    "zurich": { lat: 47.3769, lng: 8.5417, zoom: 1.4 },
+    "brussels": { lat: 50.8503, lng: 4.3517, zoom: 1.4 },
+    "amsterdam": { lat: 52.3676, lng: 4.9041, zoom: 1.4 },
+    "dublin": { lat: 53.3498, lng: -6.2603, zoom: 1.4 },
+    "copenhagen": { lat: 55.6761, lng: 12.5683, zoom: 1.4 },
+    "budapest": { lat: 47.4979, lng: 19.0402, zoom: 1.4 },
+    "prague": { lat: 50.0755, lng: 14.4378, zoom: 1.4 },
+    "doha": { lat: 25.276987, lng: 51.521067, zoom: 1.4 },
+    "jamaica": { lat: 18.1096, lng: -77.2975, zoom: 1.4 },
+    "united states": { lat: 37.0902, lng: -95.7129, zoom: 1.4 },
+    "canada": { lat: 56.1304, lng: -106.3468, zoom: 1.4 },
+    "mexico": { lat: 23.6345, lng: -102.5528, zoom: 1.4 },
+    "brazil": { lat: -14.2350, lng: -51.9253, zoom: 1.4 },
+    "argentina": { lat: -38.4161, lng: -63.6167, zoom: 1.4 },
+    "united kingdom": { lat: 55.3781, lng: -3.4360, zoom: 1.4 },
+    "france": { lat: 46.6034, lng: 2.2137, zoom: 1.4 },
+    "germany": { lat: 51.1657, lng: 10.4515, zoom: 1.4 },
+    "italy": { lat: 41.8719, lng: 12.5674, zoom: 1.4 },
+    "spain": { lat: 40.4637, lng: -3.7492, zoom: 1.4 },
+    "portugal": { lat: 39.3999, lng: -8.2245, zoom: 1.4 },
+    "russia": { lat: 61.5240, lng: 105.3188, zoom: 1.4 },
+    "china": { lat: 35.8617, lng: 104.1954, zoom: 1.4 },
+    "japan": { lat: 36.2048, lng: 138.2529, zoom: 1.4 },
+    "india": { lat: 20.5937, lng: 78.9629, zoom: 1.4 },
+    "australia": { lat: -25.2744, lng: 133.7751, zoom: 1.4 },
+    "south africa": { lat: -30.5595, lng: 22.9375, zoom: 1.4 },
+    "egypt": { lat: 26.8206, lng: 30.8025, zoom: 1.4 },
+    "nigeria": { lat: 9.0820, lng: 8.6753, zoom: 1.4 },
+    "kenya": { lat: -1.2921, lng: 36.8219, zoom: 1.4 },
+    "south korea": { lat: 35.9078, lng: 127.7669, zoom: 1.4 },
+    "indonesia": { lat: -0.7893, lng: 113.9213, zoom: 1.4 },
+    "saudi arabia": { lat: 23.8859, lng: 45.0792, zoom: 1.4 },
+    "iran": { lat: 32.4279, lng: 53.6880, zoom: 1.4 },
+    "turkey": { lat: 38.9637, lng: 35.2433, zoom: 1.4 },
+    "israel": { lat: 31.0461, lng: 34.8516, zoom: 1.4 },
+    "greece": { lat: 39.0742, lng: 21.8243, zoom: 1.4 },
+    "thailand": { lat: 15.8700, lng: 100.9925, zoom: 1.4 },
+    "vietnam": { lat: 14.0583, lng: 108.2772, zoom: 1.4 },
+    "new zealand": { lat: -40.9006, lng: 174.8860, zoom: 1.4 },
+    "pakistan": { lat: 30.3753, lng: 69.3451, zoom: 1.4 },
+    "afghanistan": { lat: 33.9391, lng: 67.7100, zoom: 1.4 },
+    "colombia": { lat: 4.5709, lng: -74.2973, zoom: 1.4 },
+    "venezuela": { lat: 6.4238, lng: -66.5897, zoom: 1.4 }
 };
+
+
 
 
 
@@ -3383,12 +4090,251 @@ function panToLocation(location) {
         console.log("Location not found in lookup table.");
     }
 }
+// Step 1: Function to create a 3D vector from latitude and longitude
+// Convert Lat/Lng to 3D Vector
+
+import { GLTFLoader } from 'https://unpkg.com/three@0.136.0/examples/jsm/loaders/GLTFLoader.js';
+
+// Create the flight path curve
+function createFlightPath(fromVec, toVec, altitude) {
+  //const midPoint = fromVec.clone().lerp(toVec, 0.5);  // Midpoint for the curve
+  const altitudeOffset = 0.01; // Offset to lift the line above the globe surface
+    const controlPoints = []; // Points for the curve, from start to end
+    // You can create a curve here, e.g., using a quadratic or cubic Bezier curve for smooth flight paths
+    const midPoint = fromVec.clone().lerp(toVec, 0.5).multiplyScalar(earthRadius + altitudeOffset * 2); // midpoint slightly higher
+    midPoint.setLength(altitude);  // Adjust altitude for curve height
+
+  const curve = new THREE.QuadraticBezierCurve3(fromVec, midPoint, toVec);
+
+  const pathGeometry = new THREE.TubeGeometry(curve, 20, 0.02, 8, false);
+  const pathMaterial = new THREE.MeshBasicMaterial({ color: 0x46dff0 });
+  const flightPath = new THREE.Mesh(pathGeometry, pathMaterial);
+
+  scene.add(flightPath);
+  return { flightPath, curve };  // Return both the path and the curve
+}
+
+
+// Step 6: Animate the plane along the curve
+function animatePlane(plane, pathCurve, duration = 5000) {
+    let progress = { t: 0 };
+
+    function animateFlight() {
+        new TWEEN.Tween(progress)
+            .to({ t: 1 }, duration)  // Duration of the flight (in milliseconds)
+            .onUpdate(() => {
+                const point = pathCurve.getPointAt(progress.t);
+                plane.position.set(point.x, point.y, point.z);
+
+                const tangent = pathCurve.getTangentAt(progress.t).normalize();
+                const normal = plane.position.clone().normalize();  // Globe is centered at (0,0,0)
+                const up = normal.clone();
+
+                plane.lookAt(plane.position.clone().add(tangent));
+                plane.up.copy(up);  // Align the plane's "up" vector with the globe's surface
+                plane.updateMatrixWorld();
+            })
+            .onComplete(() => {
+                progress.t = 0;  // Reset to loop the animation
+                animateFlight();  // Restart the flight animation
+            })
+            .start();
+    }
+
+    animateFlight();  // Start the initial animation
+}
+
 
 // When search button is clicked
 document.getElementById('searchBtn').addEventListener('click', function () {
-    const location = document.getElementById('where').value;
-    panToLocation(location); // Pan to the searched location
+    // Get selected "from" and "to" locations from the user
+  const fromLocation = document.getElementById('from').value.toLowerCase();
+  const toLocation = document.getElementById('where').value.toLowerCase();
+
+  // Check if the locations are valid and exist in the locations object
+  if (!locations[fromLocation] || !locations[toLocation]) {
+    console.error('Invalid locations selected.');
+    return;
+  }
+  // Get lat/lng from the locations object
+  const fromLatLng = locations[fromLocation];
+  const toLatLng = locations[toLocation];
+
+  // Convert lat/lng to 3D vectors (pass the globe's radius as well)
+  const fromVector = latLngToVector3(fromLatLng.lat, fromLatLng.lng, earthRadius);
+  const toVector = latLngToVector3(toLatLng.lat, toLatLng.lng, earthRadius);
+
+  // Create a new flight path and animate the plane
+  const { flightPath, curve } = createFlightPath(fromVector, toVector, earthRadius * 1.1);  // Altitude slightly above the globe
+  // Assuming you have already included the GLTFLoader from Three.js
+
+// Step 7: Load GLTF Model and animate
+const loader = new GLTFLoader();
+loader.load('js/cartoon_low_poly_private_jet/scene.gltf', function(gltf) {
+    const plane = gltf.scene;
+    scene.add(plane);
+    plane.scale.set(0.1, 0.1, 0.1);
+// Traverse the model to access and update materials
+plane.traverse((child) => {
+            if (child.isMesh) {
+                const materialName = child.material.name;
+                
+                // Set the body of the plane to white
+                if (materialName === 'body') {
+                    child.material.color.set(0xffffff);  // White
+                }
+                
+                // Optional: Adjust other materials if needed
+                if (materialName === 'orange') {
+                    child.material.color.set(0xffffff);  // Bright orange
+                }
+                
+                if (materialName === 'glass') {
+                    child.material.color.set(0x000000);  // Light blue glass for windows
+                }
+                
+                // You can also reset any other parts if needed
+                if (materialName === 'Jet__0') {
+                    child.material.color.set(0xaaaaaa);  // Default grey for other parts
+                }
+            }
+        });
+    // Animate the plane along the flight path
+    animatePlane(plane, curve);
 });
+  const location = document.getElementById('where').value;
+    panToLocation(location); // Pan to the searched location
+    const selectedCategory = document.getElementById('priceCategorySelect').value;
+    fetchMarkers(location, selectedCategory);
+  });
+  
+    async function fetchMarkers(location, category) {
+      try {
+        const normalizedLocation = normalizeLocation(location); // Normalize input
+    // Get today's date
+    const today = new Date();
+    const tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+
+    // Get the first day of the current month
+    const monthlyStartDate = new Date(today.getFullYear(), today.getMonth(), 1);
+    const monthlyEndDate = new Date(today.getFullYear(), today.getMonth() + 3, 0); // 3 months ahead
+
+    // Format the dates to YYYY-MM-DD
+    const monthlyStart = monthlyStartDate.toISOString().split('T')[0];
+    const monthlyEnd = monthlyEndDate.toISOString().split('T')[0];
+
+    const checkin = document.getElementById('checkin').value;
+    const checkout = document.getElementById('checkout').value;
+    const guests = document.getElementById('adults').value;
+
+    // Now define the searchUrl properly
+    let searchUrl = `https://www.airbnb.com/s/${location}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&adults=2&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=${monthlyStart}&monthly_length=3&monthly_end_date=${monthlyEnd}&price_filter_input_type=0&channel=EXPLORE&date_picker_type=calendar&checkin=${checkin}&checkout=${checkout}&adults=${guests}&source=structured_search_input_header&search_type=unknown&price_filter_num_nights=1&drawer_open=true`;
+
+    // Fetch markers from your backend
+    const response = await fetch(`http://localhost:3000/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
+    // Extract posts and markers from the response
+    const { markers } = await response.json(); 
+    console.log("Fetched markers:", markers);  // Log the response to check its format
+
+    if (!Array.isArray(markers)) {
+      throw new Error('Expected markers to be an array');
+    }
+
+    // Clear existing markers and add new ones
+    clearExistingMarkers();
+    addMarkersToGlobe(markers);  // Call the function to add markers
+  } catch (error) {
+    console.error("Failed to fetch markers:", error);
+  }
+}
+
+// Function to add markers to the globe
+function addMarkersToGlobe(markers) {
+  markers.forEach(marker => {
+    const { lat, lng } = marker;
+
+    // Convert lat/lng to 3D vector just like the flight path
+    const markerVector = latLngToVector3(lat, lng, earthRadius);
+
+    // Create the marker mesh
+    const markerMesh = createMarkerMesh();
+
+    // Set the marker position based on the 3D vector
+    markerMesh.position.set(markerVector.x, markerVector.y, markerVector.z);
+
+    // Ensure the marker faces outward from the globe
+    markerMesh.lookAt(new THREE.Vector3(0, 0, 0));
+
+    // Add the marker to the scene
+    scene.add(markerMesh);
+  });
+}
+
+// Function to create marker mesh for the globe
+function createMarkerMesh(lat, lng) {
+  const markerGeometry = new THREE.PlaneGeometry(0.25, 0.25);
+  const markerMaterial =  new THREE.MeshBasicMaterial({
+    color: 0xff385c,
+    side: THREE.DoubleSide,
+    onBeforeCompile: (shader) => {
+      shader.uniforms.time = globalUniforms.time;
+      shader.vertexShader = `
+      	attribute float phase;
+        varying float vPhase;
+        ${shader.vertexShader}
+      `.replace(
+        `#include <begin_vertex>`,
+        `#include <begin_vertex>
+        	vPhase = phase; // de-synch of ripples
+        `
+      );
+      shader.fragmentShader = `
+      	uniform float time;
+        varying float vPhase;
+      	${shader.fragmentShader}
+      `.replace(
+        `vec4 diffuseColor = vec4( diffuse, opacity );`,
+        `
+        vec2 lUv = (vUv - 0.5) * 2.;
+        float val = 0.;
+        float lenUv = length(lUv);
+        val = max(val, 1. - step(0.25, lenUv)); // central circle
+        val = max(val, step(0.4, lenUv) - step(0.5, lenUv)); // outer circle
+
+        float tShift = fract(time * 0.5 + vPhase);
+        val = max(val, step(0.4 + (tShift * 0.6), lenUv) - step(0.5 + (tShift * 0.5), lenUv)); // ripple
+
+        if (val < 0.5) discard;
+
+        vec4 diffuseColor = vec4( diffuse, opacity );`
+      );
+    },
+  });
+  markerMaterial.defines = { USE_UV: '' };
+
+  const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial);
+
+  // Convert lat/lng to 3D coordinates on the globe
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lng + 180) * (Math.PI / 180);
+
+  const x = -(earthRadius * Math.sin(phi) * Math.cos(theta));
+  const y = earthRadius * Math.cos(phi);
+  const z = earthRadius * Math.sin(phi) * Math.sin(theta);
+
+  markerMesh.position.set(x, y, z);
+  // Ensure the marker faces outward from the globe by making it look at the globe's center
+  markerMesh.lookAt(new THREE.Vector3(0, 0, 0));
+
+  return markerMesh;
+}
+
+	  // Clear the existing markers and add new ones based on the category
+    clearExistingMarkers();
+    markersData.forEach(markers => {
+       scene.remove(markers);
+    });
 
 
 	  document.addEventListener("DOMContentLoaded", function() {
@@ -3434,8 +4380,40 @@ document.getElementById('regionSelectBtn').addEventListener('click', function ()
       let selectedRegion = this.value;
       const selectedCategory = document.getElementById('priceCategorySelect').value;
 	// Load appropriate markers for the selected region and category
-    loadMarkersForRegionAndCategory(selectedRegion, selectedCategory);
+    //loadMarkersForRegionAndCategory(selectedRegion, selectedCategory);
+    fetchMarkers(selectedRegion, selectedCategory);
       panToRegion(selectedRegion);
+      console.log("Region button clicked. Resizing all markers.");
+
+  // Iterate through all regions in the genericMarkers object
+  Object.keys(genericMarkers).forEach(region => {
+    const markers = genericMarkers[region];
+
+    if (markers) {
+      console.log(`Resizing markers for region: ${region}`);
+
+      // Create new smaller geometry (half the size)
+      const smallerMarkerGeometry = new THREE.PlaneGeometry(0.25, 0.25); // Half the original size
+
+      // Loop through all the markers in this region and update their geometry
+      for (let i = 0; i < markers.count; i++) {
+        const instanceMatrix = new THREE.Matrix4();
+        markers.getMatrixAt(i, instanceMatrix);
+        
+        const markerMesh = new THREE.Mesh(smallerMarkerGeometry, markerMaterial);
+        markerMesh.applyMatrix4(instanceMatrix);
+
+        // Optionally, remove the old markers and add the new resized ones
+        scene.remove(markers); // Remove existing markers from the scene
+        scene.add(markerMesh); // Add the new resized markers
+      }
+
+      // Replace the markers with the new resized markers
+      genericMarkers[region] = markers;
+    } else {
+      console.warn(`No markers found for the region: ${region}`);
+    }
+  });
     });
 	  // Load markers based on region and price category
 // Load markers based on region and price category
@@ -3475,6 +4453,85 @@ async function loadMarkersForRegionAndCategory(region, category) {
         updateSpinnerText("Error loading listings for " + region);
     }
 }
+async function fetchMarkers(region, category) {
+  try {
+    const response = await fetch(`http://localhost:3000/get-markers?region=${region}&category=${category}`);
+    const markers = await response.json();
+     // Clear the existing markers before adding new ones
+     clearExistingMarkers();
+    addMarkersToGlobe(markers);  // Call the function to add markers
+  } catch (error) {
+    console.error("Failed to fetch markers:", error);
+  }
+}
+
+// Function to add markers to the globe
+function addMarkersToGlobe(markers) {
+  markers.forEach(marker => {
+    const { lat, lng } = marker;
+    const markerMesh = createMarkerMesh(lat, lng);
+    scene.add(markerMesh);
+  });
+}
+
+// Function to create marker mesh for the globe
+function createMarkerMesh(lat, lng) {
+  const markerGeometry = new THREE.PlaneGeometry(0.25, 0.25);
+  const markerMaterial =  new THREE.MeshBasicMaterial({
+    color: 0xff385c,
+    side: THREE.DoubleSide,
+    onBeforeCompile: (shader) => {
+      shader.uniforms.time = globalUniforms.time;
+      shader.vertexShader = `
+      	attribute float phase;
+        varying float vPhase;
+        ${shader.vertexShader}
+      `.replace(
+        `#include <begin_vertex>`,
+        `#include <begin_vertex>
+        	vPhase = phase; // de-synch of ripples
+        `
+      );
+      shader.fragmentShader = `
+      	uniform float time;
+        varying float vPhase;
+      	${shader.fragmentShader}
+      `.replace(
+        `vec4 diffuseColor = vec4( diffuse, opacity );`,
+        `
+        vec2 lUv = (vUv - 0.5) * 2.;
+        float val = 0.;
+        float lenUv = length(lUv);
+        val = max(val, 1. - step(0.25, lenUv)); // central circle
+        val = max(val, step(0.4, lenUv) - step(0.5, lenUv)); // outer circle
+
+        float tShift = fract(time * 0.5 + vPhase);
+        val = max(val, step(0.4 + (tShift * 0.6), lenUv) - step(0.5 + (tShift * 0.5), lenUv)); // ripple
+
+        if (val < 0.5) discard;
+
+        vec4 diffuseColor = vec4( diffuse, opacity );`
+      );
+    },
+  });
+  markerMaterial.defines = { USE_UV: '' };
+
+  const markerMesh = new THREE.Mesh(markerGeometry, markerMaterial);
+
+  // Convert lat/lng to 3D coordinates on the globe
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lng + 180) * (Math.PI / 180);
+
+  const x = -(earthRadius * Math.sin(phi) * Math.cos(theta));
+  const y = earthRadius * Math.cos(phi);
+  const z = earthRadius * Math.sin(phi) * Math.sin(theta);
+
+  markerMesh.position.set(x, y, z);
+  // Ensure the marker faces outward from the globe by making it look at the globe's center
+  markerMesh.lookAt(new THREE.Vector3(0, 0, 0));
+
+  return markerMesh;
+}
 
 	  // Clear the existing markers and add new ones based on the category
     clearExistingMarkers();
@@ -3512,53 +4569,71 @@ function getMarkersDataForCheapestListings(region) {
         // Add more markers...
     ];
 }
-
+  
+// Declare the position variable
+let position;
+  let zoomLevel;
 // Pan to region based on dropdown selection
-	  // Pan to region based on dropdown selection
+// Pan to region based on dropdown selection
 // Pan to region based on dropdown selection
 function panToRegion(region) {
-  let position, zoomLevel;
   console.log(`Selected region: ${region}`);  // Debug
 
   switch (region) {
     case 'africa':
       // Adjusted x value to pan the camera more to the right
       position = { x: 16.0, y: 0, z: 1.74 }; 
-      zoomLevel = 1.5; 
+      zoomLevel = 1.5;
+      //zoomLevel = 2.5987766446450165;
       break;
       
     case 'europe': 
-      position = { x: 3.5, y: 2.91, z: 0.55 }; 
-      zoomLevel = 2.0; 
+      position = { x: 4.0, y: 2.91, z: 0.55 }; 
+      zoomLevel = 2.0;
+      //zoomLevel = 3.352075053253554;
       break;
       
     case 'america': 
       position = { x: 0, y: 2.55, z: 4.42 }; 
-      zoomLevel = 2.0; 
+      //zoomLevel = 2.0;
+      zoomLevel = 3.3270465054184264; 
       break;
       
     case 'south america': 
       position = { x: 1.5, y: -0.5, z: 4.3 }; 
-      zoomLevel = 1.7; 
+      //zoomLevel = 1.7;
+      zoomLevel = 3.26378534559376;
       break;
       
     case 'carribbean': 
       position = { x: 0.65, y: 2.0, z: 4.6 }; 
-      zoomLevel = 2.4; 
+      //zoomLevel = 2.4;
+      zoomLevel = 4.260619061597975; 
       break;
       
     case 'asia': 
       position = { x: -0.89, y: 3.28, z: -3.92 }; 
-      zoomLevel = 1.9; 
+      //zoomLevel = 1.9;
+      zoomLevel = 3.391380517604982;
       break;
       
     case 'world': 
       position = { x: 16.0, y: 0, z: 1.74 }; 
-      zoomLevel = 1.4; 
+      zoomLevel = 1.4;
+      //zoomLevel = 10.101116854411483;
       break;
     default: return;
   }
-
+  // Ensure zoomLevel is properly set
+  if (typeof zoomLevel === 'undefined') {
+    console.error('Zoom level is undefined');
+    return;
+  }
+  // Initial pan based on default zoom level
+  executePan(position, zoomLevel);
+}
+// Function to handle the pan and zoom
+function executePan(position, zoomLevel) {
   stopAllTweens(); // Stop any existing animations
   controls.autoRotate = false; // Stop auto-rotation
   console.log(`Panning to x:${position.x}, y:${position.y}, z:${position.z}, zoom:${zoomLevel}`);  // Debug
@@ -3595,7 +4670,7 @@ function animateCameraPan(x, y, z, zoomLevel) {
     .onComplete(function () {
       // Restart slow auto-rotation after panning and zooming
       setTimeout(function () {
-        controls.autoRotate = true;
+        controls.autoRotate = false;
         controls.autoRotateSpeed = 0.25; // Slow rotation speed
       }, 500);
     })
