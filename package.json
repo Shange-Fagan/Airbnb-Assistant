@@ -5,11 +5,11 @@
   "main": "index.html",
   "type": "commonjs",
   "scripts": {
-    "frontend": "node server/server.js",
-    "backend": "node server.js",
-    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "heroku-postbuild": "cd server && npm install"
-  },
+  "frontend": "node server/server.js",
+  "backend": "node server.js",
+  "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+  "heroku-postbuild": "cd server && npm install"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shange-Fagan/Airbnb-Assistant.git"
