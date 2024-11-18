@@ -1,0 +1,42 @@
+{
+  "name": "airbnb-assistant",
+  "version": "1.0.0",
+  "description": "airbnb assistant finder using 3d real-time globe",
+  "main": "index.html",
+  "type": "commonjs",
+  "scripts": {
+    "frontend": "node server/server.js",
+    "backend": "node server.js",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "heroku-postbuild": "cd server && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shange-Fagan/Airbnb-Assistant.git"
+  },
+  "keywords": [
+    "airbnb",
+    "assistant",
+    "puppeteer",
+    "globe"
+  ],
+  "author": "Shange Fagan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Shange-Fagan/Airbnb-Assistant/issues"
+  },
+  "homepage": "https://github.com/Shange-Fagan/Airbnb-Assistant#readme",
+  "dependencies": {
+    "@octokit/rest": "^18.12.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "heroku": "^9.3.2",
+    "puppeteer": "^23.7.0",
+    "three": "^0.168.0",
+    "three-globe": "^2.34.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

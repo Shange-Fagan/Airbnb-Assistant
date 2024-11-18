@@ -1,0 +1,188 @@
+ /* Airbnb-style Header */
+ /* Airbnb-style Header */
+ #header {
+  position: absolute;
+  top: 55px;
+       width: 100%;
+  display: flex;
+  justify-content: space-between; /* Center the header content */
+  align-items: center;
+  /*background-color: white;*/ /* White background */
+        background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px 40px; /* Padding for spacing */
+  border-bottom: 0px solid #e0e0e0; /* Light bottom border */
+    /*box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);*/
+    z-index: 10001;
+    
+}
+#header input, #header select {
+  font-size: 16px; /* Slightly smaller font size */
+  padding: 10px 15px; /* Padding inside inputs */
+  border: 0px solid #ddd; /* Light gray border */
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50px; /* Fully rounded corners for inputs */
+  margin-right: 10px; /* Spacing between input fields */
+  width: 220px; /* Slightly smaller width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+color: rgba(255, 255, 255, 0.75);
+  width: 150px; /* Set width to auto */
+  max-width: max-content; /* Ensure it adjusts based on the placeholder or content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+#header input, #header select {
+  font-size: 16px; /* Larger font for inputs */
+  padding: 10px 15px; /* Padding inside inputs */
+  border: 0px solid #e0e0e0; /* Border similar to Airbnb */
+    /*color: rgba(255, 255, 255, 0.75);*/
+    /*color: #222222;*/
+    /*color: #717171;*/
+       background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 25px; /* Rounded corners for inputs */
+  margin-right: 10px; /* Spacing between input fields */
+  width: 250px; /* Set width for input fields */
+    /*box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10002; /* Make sure inputs are interactive */
+}
+
+#header input:focus, #header select:focus {
+  outline: none;
+  border-color: #ff385c; /* Red outline for focus similar to Airbnb */
+}
+
+#header button {
+  background-color: #ff385c; /* Airbnb red color */
+  border: none;
+  padding: 10px 25px; /* Padding for button */
+  border-radius: 25px; /* Rounded button */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 10002; /* Ensure the button is interactive */
+}
+
+#header button:hover {
+  background-color: #e03a56; /* Darker red on hover */
+}
+
+#header .search-section {
+    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10002; /* Ensure the entire search section is clickable */
+}
+
+#header .search-section input {
+  margin-right: 10px; /* Spacing between the input fields */
+  color: white;
+}
+
+#header .logo {
+  margin-right: auto; /* Push logo to the left */
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff385c; /* Airbnb logo color */
+}
+
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+  }
+
+  #header input {
+    width: 100%;
+    margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.75);
+  }
+
+  #header button {
+    width: 100%;
+  }
+}
+      /*#header input::placeholder {
+  color: #717171;*//* Light gray placeholder text */
+  /*font-size: 16px;*//* Airbnb-style font size */
+/*}*/
+
+#header input {
+  /*color: #222222;*/ /* Darker gray/black for user-inputted text */
+  background-color: rgba(255, 255, 255, 0.15);
+  /*border: 1px solid #e0e0e0;*/ /* Light border similar to Airbnb */
+    border: 0px solid #e0e0e0; /* Border similar to Airbnb */
+  padding: 10px 15px;
+  border-radius: 25px; /* Rounded edges */
+  width: 250px;
+  margin-right: 10px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#header input:focus {
+  border-color: #ff385c; /* Red border when focused, Airbnb style */
+  outline: none;
+}
+      /* Styling for the placeholder text in all inputs, including the date input */
+/* General Placeholder Styling */
+#header input::placeholder {
+  color: rgba(255, 255, 255, 0.75); /* Light gray placeholder text */
+  opacity: 1; /* Ensure full opacity */
+}
+
+/* Styling for Specific Inputs */
+#header input[type="text"]::placeholder,
+#header input[type="date"]::placeholder {
+  color: rgba(255, 255, 255, 0.75); /* Light gray placeholder for text and date inputs */
+  opacity: 1; /* Ensure full opacity */
+}
+      input[type="date" i] {
+    font-family: monospace;
+    padding-inline-start: 1px;
+    cursor: default;
+    padding: 0px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Older browser support for placeholders */
+#header input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#header input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#header input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#header input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#header input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+/* Style the input[type="date"] */
+input[type="date"] {
+  appearance: none; /* Remove default appearance */
+  -webkit-appearance: none; /* For Safari */
+  padding: 10px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.75)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>') no-repeat;
+  background-position: right 10px center; /* Position the icon */
+  background-size: 20px; /* Adjust the size of the icon */
+  border: 1px solid #e0e0e0;
+  color: rgba(255, 255, 255, 0.75); /* Text color */
+  background-color: rgba(255, 255, 255, 0.15); /* Background */
+  border-radius: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0; /* Hide the default calendar icon */
+}
+
+  

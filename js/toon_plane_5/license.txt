@@ -1,0 +1,8 @@
+Model Information:
+* title:	Toon plane 5
+* source:	https://sketchfab.com/3d-models/toon-plane-5-bde751799d0a4c1a9f417ba56468a91f
+* author:	Randall_3D (https://sketchfab.com/Randall_3D)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
