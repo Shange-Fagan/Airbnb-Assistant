@@ -2,8 +2,9 @@ import express from 'express';
 import puppeteer from 'puppeteer';
 import cors from 'cors';
 
-const app = express();
 const express = require('express');
+const app = express();
+
 const path = require('path');
 
 const PORT = process.env.PORT || 3000; // Use Heroku's port or default to 3000
