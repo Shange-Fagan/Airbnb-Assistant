@@ -17,10 +17,11 @@ app.get('/', (req, res) => {
 });
 
 // Proper CORS setup
+// Use CORS to allow requests from your frontend domain
 app.use(cors({
-  origin: 'http://localhost:5000',  // Allow requests from your frontend's domain
-  methods: ['GET', 'POST'],
-  credentials: true
+  origin: 'http://bnb-navigator.com', // Allow this specific domain
+  methods: 'GET,POST', // Allowed methods
+  allowedHeaders: 'Content-Type'
 }));
 function waitForTimeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
