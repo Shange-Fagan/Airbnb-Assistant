@@ -27,13 +27,6 @@ function waitForTimeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");  // You can set a specific domain like 'http://bnb-navigator.com'
-  res.header("Access-Control-Allow-Methods", "GET, POST");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  next();
-});
-
 
 // Airbnb Scraping based on searchUrl (Original code)
 async function scrapeAirbnbPosts(searchUrl) {
