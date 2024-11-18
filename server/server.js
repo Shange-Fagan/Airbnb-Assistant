@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 // Proper CORS setup
 // Use CORS to allow requests from your frontend domain
 app.use(cors({
-  origin: 'http://bnb-navigator.com', // Allow this specific domain
+  origin: 'https://shange-fagan.github.io', // Allow this specific domain
   methods: 'GET,POST', // Allowed methods
   allowedHeaders: 'Content-Type'
 }));
