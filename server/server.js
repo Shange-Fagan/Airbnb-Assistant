@@ -2,7 +2,6 @@ import express from 'express';
 import puppeteer from 'puppeteer';
 import cors from 'cors';
 
-const express = require('express');
 const app = express();
 
 const path = require('path');
