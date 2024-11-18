@@ -18,11 +18,14 @@ app.get('/', (req, res) => {
 
 // Proper CORS setup
 // Use CORS to allow requests from your frontend domain
+// Allow CORS from your GitHub Pages domain
 app.use(cors({
-  origin: 'https://shange-fagan.github.io', // Allow this specific domain
-  methods: 'GET,POST', // Allowed methods
-  allowedHeaders: 'Content-Type'
+  origin: ['https://shange-fagan.github.io', 'http://bnb-navigator.com', 'http://localhost:5001', 'https://airbnb-assistant-7e89835c55e1.herokuapp.com/'], // Add your frontend URLs here
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type,Authorization',
 }));
+app.options('*', cors()); // Enable preflight across all routes
+
 function waitForTimeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
