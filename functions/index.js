@@ -24,9 +24,14 @@ app.get('/', (req, res) => {
 // Use CORS to allow requests from your frontend domain
 // Allow CORS from your GitHub Pages domain
 app.use(cors({
-  origin: ['https://shange-fagan.github.io', 'https://airbnbexplorer.com', 'http://localhost:5001', 'https://airbnb-assistant-7e89835c55e1.herokuapp.com/'], // Add your frontend URLs here
-  methods: 'GET,POST',
-  allowedHeaders: 'Content-Type,Authorization',
+    origin: [
+        'http://localhost:5001', // Allow requests from localhost
+        'https://shange-fagan.github.io', // Frontend deployment domain
+        'https://airbnbexplorer.com', // Your custom domain
+        'https://api-omx7tvjdea-uc.a.run.app' // Your API domain
+    ],
+    methods: 'GET,POST',
+    allowedHeaders: 'Content-Type,Authorization',
 }));
 app.options('*', cors()); // Enable preflight across all routes
 
