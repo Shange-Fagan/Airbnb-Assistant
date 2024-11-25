@@ -1,25 +1,30 @@
-import express from 'express';
-import puppeteer from 'puppeteer';
-import cors from 'cors';
-import path from 'path';
+const functions = require('firebase-functions'); // Use CommonJS for Firebase Functions
+const express = require('express');
+const puppeteer = require('puppeteer');
+const cors = require('cors');
 
 const app = express();
+const path = require('path');
 
-const PORT = process.env.PORT || 3000; // Use Heroku's port or default to 3000
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+
 
 // Serve static files from the public directory
 //app.use(express.static(path.join(__dirname, 'public')));
 
 // Handle the root route
-//app.get('/', (req, res) => {
-  //res.sendFile(path.join(__dirname, 'index.html'));
-//});
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Proper CORS setup
 // Use CORS to allow requests from your frontend domain
 // Allow CORS from your GitHub Pages domain
 app.use(cors({
-  origin: ['https://shange-fagan.github.io', 'http://bnb-navigator.com', 'http://localhost:5001', 'https://airbnb-assistant-7e89835c55e1.herokuapp.com/'], // Add your frontend URLs here
+  origin: ['https://shange-fagan.github.io', 'https://airbnbexplorer.com', 'http://localhost:5001', 'https://airbnb-assistant-7e89835c55e1.herokuapp.com/'], // Add your frontend URLs here
   methods: 'GET,POST',
   allowedHeaders: 'Content-Type,Authorization',
 }));
@@ -39,7 +44,8 @@ async function scrapeAirbnbPosts(searchUrl) {
         '--disable-setuid-sandbox',
         '--window-size=1920,1080',
         '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-      ]
+      ],
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
     });
     const page = await browser.newPage();
 
@@ -533,6 +539,8 @@ console.log('Converted Marker Lat/Lng with Scaling:', markerLatLngs);
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+//app.listen(PORT, () => {
+  //console.log(`Server is running on port ${PORT}`);
+//});
+// Wrap Express app as Firebase Cloud Function
+exports.api = functions.https.onRequest(app);

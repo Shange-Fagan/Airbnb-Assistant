@@ -438,14 +438,13 @@ a, button, input, select, iframe {
 }
 #header .airbnb-button2 {
   display: flex;
-  width: 105px;
-  margin-left: 10px;
+  left: 10px;
   justify-content: center;
   align-items: center;
 justify-content: center;
     background-color: #ff385c; /* Airbnb red color */
     border: none;
-    padding: 8px 3px; /* Slightly smaller padding */
+    padding: 7px 3px; /* Slightly smaller padding */
     border-radius: 50px; /* Fully rounded button */
     color: white;
     font-size: 16px;
@@ -457,7 +456,7 @@ justify-content: center;
 }
 .airbnb-button2 img {
   display: flex;
-  margin-left: 0px;
+  margin: 0 auto;
 }
 
 
@@ -1292,13 +1291,7 @@ overflow: hidden;
 }
 
 /* Image for each post */
-/*
-    .post img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 15px;
-    
+/*.post img {
   width: 100%;
   height: 100%;
   max-height: 200px; /* Control max height of the image */
@@ -1350,13 +1343,7 @@ overflow: hidden;
   justify-content: space-between;
 }
 
-
-    .post img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 15px;
-    
+.post img {
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -1854,24 +1841,9 @@ input[type="date"]::-webkit-datetime-edit {
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5689710336620898"
 crossorigin="anonymous"></script>
-
-<style>
-.post img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-</style>
-
 </head>
 <body>
-  
-    <div id="overlayContainer" style="resize: both; overflow: auto;">
-        <div class="drag-handle" style="cursor: grab; background: lightgray; padding: 10px; border-radius: 5px;">
-            Drag to minimize or maximize
-        </div>
-    
+  <div id="overlayContainer">
     <button id="closeBtn" class="close-btn">X</button>
     <div class="drag-handle" style="display: block;">
       <div class="line" style="display: block;"></div>
@@ -2069,11 +2041,6 @@ crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js"></script>
-<!-- Firebase App (the core Firebase SDK) -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-
-<!-- Firebase Authentication -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 
 <script>
   // Function to toggle the visibility of the region select dropdown when clicking the button
@@ -2215,8 +2182,7 @@ import { EffectComposer } from 'https://unpkg.com/three@0.136.0/examples/jsm/pos
 //import { RenderPass } from 'https://unpkg.com/three@0.136.0/examples/jsm/postprocessing/RenderPass.js?v=1';
 //import { UnrealBloomPass } from 'https://unpkg.com/three@0.136.0/examples/jsm/postprocessing/UnrealBloomPass.js?v=1';
 //import  Luxon from 'https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js'; //(if using modules)
-
-// Scene Setup
+  // Scene Setup
   const scene = new THREE.Scene();
   /*const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 2000);*/
   let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
@@ -2309,63 +2275,6 @@ regionPopupButton.style.backgroundColor = '#00aaff';
   //document.getElementById('dayTicker').classList.toggle('hidden', isChecked);
   //document.getElementById('trivagoIframeContainer').classList.toggle('hidden', !isChecked);
 });
-
-  // Firebase Configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCmcerUwd_vjsYI4rU60DxaNmipvlmq2A4",
-    authDomain: "airbnb-navigator.firebaseapp.com",
-    projectId: "airbnb-navigator",
-    storageBucket: "airbnb-navigator.appspot.com",
-    messagingSenderId: "185411449537",
-    appId: "1:185411449537:web:2e8e1aca3a065e2d769a40",
-    measurementId: "G-26BFQTVQ89"
-  };
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  // Initialize Firebase Authentication
-  const auth = firebase.auth();
-
-  // Handle Login/Logout
-  // Handle login/logout and show liked posts
-  document.getElementById('loginButton').addEventListener('click', () => {
-    const user = firebase.auth().currentUser;
-
-    if (user) {
-        const action = confirm('Do you want to view your liked posts? Click "Cancel" to log out.');
-        if (action) {
-            showLikedPosts(); // Show liked posts
-        } else {
-            firebase.auth().signOut().then(() => {
-                alert('Logged out successfully.');
-                updateLoginButton(null);
-            }).catch(error => console.error('Error during logout:', error));
-        }
-    } else {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithPopup(provider)
-            .then(result => {
-                alert(`Logged in as ${result.user.displayName}`);
-                updateLoginButton(result.user);
-            }).catch(error => console.error('Login error:', error));
-    }
-});
-
-
-
-  // Update button text based on login state
-  function updateLoginButton(user) {
-    const loginButton = document.getElementById('loginButton');
-    if (user) {
-        loginButton.innerHTML = `<img src="js/profile-icon.png" alt="Profile Icon" style="width: 24px; height: 24px; margin-right: 8px;"> Logout`;
-    } else {
-        loginButton.innerHTML = `<img src="js/profile-icon.png" alt="Profile Icon" style="width: 24px; height: 24px; margin-right: 8px;"> Login`;
-    }
-}
-
-
-
 
 // Show loading screen and switch SVGs
 document.addEventListener('DOMContentLoaded', () => {
@@ -4662,11 +4571,11 @@ const monthlyEnd = monthlyEndDate.toISOString().split('T')[0];  // Last day of t
   hideSpinnerContainer();
 
 });
-//const overlayContainer = document.getElementById('overlayContainer');
-//const dragHandle = document.querySelector('.drag-handle');
+const overlayContainer = document.getElementById('overlayContainer');
+const dragHandle = document.querySelector('.drag-handle');
 
-//let isDragging = false;
-//let startY, initialHeight;
+let isDragging = false;
+let startY, initialHeight;
 
 dragHandle.addEventListener('mousedown', (e) => {
   isDragging = true;
@@ -4722,7 +4631,7 @@ async function fetchAirbnbPosts(searchUrl) {
         // Update spinner text to indicate scraping started
         updateSpinnerText("Retrieving posts from Airbnb...");
 
-        const response = await fetch(`https://api-omx7tvjdea-uc.a.run.app/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
+        const response = await fetch(`http://localhost:3000/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
         const data = await response.json();
          // Ensure that 'posts2' is an array before mapping
          const posts2 = Array.isArray(data.posts2) ? data.posts2 : [];
@@ -4828,7 +4737,7 @@ function extractPriceInfo(priceDetails) {
     }
 }
 
-function populateOverlay(posts2) {
+        function populateOverlay(posts2) {
     const overlay = document.getElementById('overlayContainer');
     overlay.innerHTML = ''; // Clear previous posts
 
@@ -4872,12 +4781,6 @@ function populateOverlay(posts2) {
         viewLink.textContent = 'View Listing';
         viewLink.classList.add('view-link');
 
-        // Add Like button
-        const likeButton = document.createElement('button');
-        likeButton.textContent = '♥ Like';
-        likeButton.classList.add('like-button');
-        likeButton.addEventListener('click', () => saveToLikes(post));
-
         // Append elements to the postDiv
         postDiv.appendChild(img);
         postDiv.appendChild(title);
@@ -4886,13 +4789,11 @@ function populateOverlay(posts2) {
         postDiv.appendChild(pricePerNight);
         postDiv.appendChild(rating);
         postDiv.appendChild(viewLink);
-        postDiv.appendChild(likeButton);
 
         // Append the postDiv to the overlay
         overlay.appendChild(postDiv);
     });
 }
-
 
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -4900,63 +4801,6 @@ function populateOverlay(posts2) {
         updateSpinnerText("Error fetching Airbnb listings. Please try again.");
     }
 }
-import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
-
-function saveToLikes(post) {
-    const user = firebase.auth().currentUser;
-
-    if (!user) {
-        alert('Please log in to like a post.');
-        return;
-    }
-
-    const db = getFirestore();
-    const userLikesRef = doc(db, `likes/${user.uid}/${post.id}`);
-
-    setDoc(userLikesRef, post)
-        .then(() => {
-            alert('Post added to your likes!');
-        })
-        .catch(error => {
-            console.error('Error saving liked post:', error);
-        });
-}
-
-import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
-
-function showLikedPosts() {
-    const user = firebase.auth().currentUser;
-
-    if (!user) {
-        alert('Please log in to view your liked posts.');
-        return;
-    }
-
-    const db = getFirestore();
-    const userLikesRef = collection(db, `likes/${user.uid}`);
-
-    getDocs(userLikesRef)
-        .then(snapshot => {
-            const likedPosts = snapshot.docs.map(doc => doc.data());
-            if (likedPosts.length > 0) {
-                populateOverlay(likedPosts); // Display the liked posts
-            } else {
-                alert('No liked posts found.');
-            }
-        })
-        .catch(error => {
-            console.error('Error retrieving liked posts:', error);
-        });
-}
-
-
-
-
-
-// Add an event listener to the profile button to show liked posts
-document.getElementById('loginButton').addEventListener('click', showLikedPosts);
-
-
 document.querySelectorAll('.post-grid').forEach((item, index) => {
     // Make sure `index` matches the corresponding marker
     item.addEventListener('mouseover', function() {
@@ -5796,7 +5640,7 @@ baseMesh.scale.set(size, size, size);
     let searchUrl = `https://www.airbnb.com/s/${location}/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&adults=2&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=${monthlyStart}&monthly_length=3&monthly_end_date=${monthlyEnd}&price_filter_input_type=0&channel=EXPLORE&date_picker_type=calendar&checkin=${checkin}&checkout=${checkout}&adults=${guests}&source=structured_search_input_header&search_type=unknown&price_filter_num_nights=1&drawer_open=true`;
 
     // Fetch markers from your backend
-    const response = await fetch(`https://api-omx7tvjdea-uc.a.run.app/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
+    const response = await fetch(`http://localhost:3000/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
     // Extract posts and markers from the response
     const { markers } = await response.json(); 
     console.log("Fetched markers:", markers);  // Log the response to check its format
@@ -6049,7 +5893,7 @@ async function fetchAirbnbPosts(searchUrl) {
         // Update spinner text to indicate scraping started
         updateSpinnerText("Retrieving posts from Airbnb...");
 
-        const response = await fetch(`https://api-omx7tvjdea-uc.a.run.app/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
+        const response = await fetch(`http://localhost:3000/scrape-airbnb?searchUrl=${encodeURIComponent(searchUrl)}`);
         const data = await response.json();
          // Ensure that 'posts2' is an array before mapping
          const posts2 = Array.isArray(data.posts2) ? data.posts2 : [];
@@ -6226,13 +6070,13 @@ async function loadMarkersForRegionAndCategory(region, category) {
         updateSpinnerText("Fetching listings for " + region + "...");
 
         // Fetch the listings data from your backend based on region and category
-        const response = await fetch(`https://api-omx7tvjdea-uc.a.run.app/get-markers?region=${region}&category=${category}`, {
+        const response = await fetch(`http://localhost:3000/get-markers?region=${region}&category=${category}`, {
   method: 'GET',
   credentials: 'include',  // If you need cookies or credentials
 });
         const markersData = await response.json();  // Assuming the backend returns a JSON array of markers
         console.log(`Fetching markers from: ${url}`);
-	    console.log(`Fetching markers from: https://api-omx7tvjdea-uc.a.run.app/get-markers?region=${region}&category=${category}`);
+	    console.log(`Fetching markers from: http://localhost:3000/get-markers?region=${region}&category=${category}`);
 
         // Clear the existing markers before adding new ones
         clearExistingMarkers();
@@ -6248,7 +6092,7 @@ async function loadMarkersForRegionAndCategory(region, category) {
 
         // Update spinner text once loading is complete
         updateSpinnerText("Listings loaded for " + region);
-	    console.log(`Fetching markers from: https://api-omx7tvjdea-uc.a.run.app/get-markers?region=${region}&category=${category}`);
+	    console.log(`Fetching markers from: http://localhost:3000/get-markers?region=${region}&category=${category}`);
 
 
     } catch (error) {
@@ -6258,7 +6102,7 @@ async function loadMarkersForRegionAndCategory(region, category) {
 }
 async function fetchMarkers(region, category) {
   try {
-    const response = await fetch(`https://api-omx7tvjdea-uc.a.run.app/get-markers?region=${region}&category=${category}`);
+    const response = await fetch(`http://localhost:3000/get-markers?region=${region}&category=${category}`);
     const markers = await response.json();
      // Clear the existing markers before adding new ones
      clearExistingMarkers();
@@ -7511,35 +7355,5 @@ animate(); // Start the animation loop
 animate();*/
 
   </script>
-
-
-
-<script>
-  const overlayContainer = document.getElementById('overlayContainer');
-  const dragHandle = overlayContainer.querySelector('.drag-handle');
-  let isDragging = false;
-  let startY;
-
-  dragHandle.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startY = e.clientY;
-    overlayContainer.style.transition = 'none'; // Disable transition during drag
-    document.body.style.userSelect = 'none'; // Prevent text selection during drag
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const dy = e.clientY - startY;
-    startY = e.clientY;
-    const newHeight = overlayContainer.offsetHeight - dy;
-    overlayContainer.style.height = `${Math.max(40, Math.min(window.innerHeight - 100, newHeight))}px`;
-  });
-
-  window.addEventListener('mouseup', () => {
-    isDragging = false;
-    document.body.style.userSelect = ''; // Restore text selection
-  });
-</script>
-
 </body>
 </html>

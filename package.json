@@ -5,11 +5,11 @@
   "main": "index.html",
   "type": "commonjs",
   "scripts": {
-  "frontend": "node server/server.js",
-  "backend": "node server.js",
-  "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-  "heroku-postbuild": "cd server && npm install"
-},
+    "frontend": "node server/server.js",
+    "backend": "node server.js",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "heroku-postbuild": "cd server && npm install"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shange-Fagan/Airbnb-Assistant.git"
@@ -31,7 +31,10 @@
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "firebase": "^11.0.2",
+    "GhostCat": "github:GhostCatcg/3d-earth",
     "heroku": "^9.3.2",
+    "luxon": "^3.5.0",
     "puppeteer": "^23.7.0",
     "three": "^0.168.0",
     "three-globe": "^2.34.4"
