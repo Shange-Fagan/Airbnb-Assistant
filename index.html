@@ -460,6 +460,32 @@ justify-content: center;
   margin-left: 0px;
 }
 
+#likedPostsButton {
+  background-color: #ff385c; /* Airbnb red */
+  border: none;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#likedPostsButton:hover {
+  background-color: #e03a56; /* Darker shade on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#likedPostsButton svg {
+  fill: white;
+  align-items: center;
+}
+
+
 
 #header button:hover {
     background-color: #e03a56; /* Darker red on hover */
@@ -1963,6 +1989,13 @@ crossorigin="anonymous"></script>
   <button id="loginButton" class="airbnb-button2">
     <img src="js/profile-icon.png" alt="Profile Icon" style="width: 24px; display:flex; align-items: center; height: 24px; margin-right: 8px;">
   </button>
+  <button id="likedPostsButton" class="liked-button">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px">
+      <path fill="none" d="M0 0h24v24H0z"/>
+      <path d="M12.1 21.55l-1.1-1.05C5.4 15.24 2 12.09 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.59-3.4 6.74-8.9 11.99l-1.1 1.06z"/>
+    </svg>
+  </button>
+  
 </div>
 	
 <div id="regionPopup">
@@ -2333,36 +2366,41 @@ regionPopupButton.style.backgroundColor = '#00aaff';
     const user = firebase.auth().currentUser;
 
     if (user) {
-        const action = confirm('Do you want to view your liked posts? Click "Cancel" to log out.');
-        if (action) {
-            showLikedPosts(); // Show liked posts
-        } else {
-            firebase.auth().signOut().then(() => {
-                alert('Logged out successfully.');
-                updateLoginButton(null);
-            }).catch(error => console.error('Error during logout:', error));
-        }
+        // User is logged in, handle logout
+        firebase.auth().signOut().then(() => {
+            alert('Logged out successfully.');
+            updateLoginButton(null); // Update the button to show "Login"
+        }).catch(error => console.error('Error during logout:', error));
     } else {
+        // User is not logged in, handle login
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider)
             .then(result => {
                 alert(`Logged in as ${result.user.displayName}`);
-                updateLoginButton(result.user);
+                updateLoginButton(result.user); // Update the button to show "Logout"
             }).catch(error => console.error('Login error:', error));
     }
 });
 
-
-
-  // Update button text based on login state
-  function updateLoginButton(user) {
+// Update button text based on login state
+function updateLoginButton(user) {
     const loginButton = document.getElementById('loginButton');
     if (user) {
-        loginButton.innerHTML = `<img src="js/profile-icon.png" alt="Profile Icon" style="width: 24px; height: 24px; margin-right: 8px;"> Logout`;
+        // Show "Logout" when user is logged in
+        loginButton.innerHTML = `
+            <img src="js/profile-icon.png" alt="Profile Icon" style="width: 24px; height: 24px; margin-right: 8px;"> Logout`;
     } else {
-        loginButton.innerHTML = `<img src="js/profile-icon.png" alt="Profile Icon" style="width: 24px; height: 24px; margin-right: 8px;"> Login`;
+        // Show "Login" when no user is logged in
+        loginButton.innerHTML = `
+            <img src="js/profile-icon.png" alt="Profile Icon" style="width: 24px; height: 24px; margin-right: 8px;"> Login`;
     }
 }
+
+// Set initial button state on page load
+firebase.auth().onAuthStateChanged(user => {
+    updateLoginButton(user); // Update button based on current auth state
+});
+
 
 
 
@@ -4954,7 +4992,7 @@ function showLikedPosts() {
 
 
 // Add an event listener to the profile button to show liked posts
-document.getElementById('loginButton').addEventListener('click', showLikedPosts);
+document.getElementById('likedPostsButton').addEventListener('click', showLikedPosts);
 
 
 document.querySelectorAll('.post-grid').forEach((item, index) => {
