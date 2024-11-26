@@ -64,6 +64,34 @@ a, button, input, select, iframe {
       z-index: 22011;
     
 }
+#topLeftLabel {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 225px;
+  height: 45px;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%); /* Creates one slant going up across the right side */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Optional: make it stand out */
+  background-color: #ff385c; /* Airbnb's primary color */
+  padding: 5px 10px;
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+  display: flex; /* Use flexbox */
+  align-items: center;
+  padding-left: 0px; /* Adjust the spacing on the left */
+  border-radius: 0px;
+  z-index: 22012; /* Ensure it's above other content */
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: slight shadow for better visibility */
+}
+#topLeftLabel span {
+  margin-left: 0px; /* Adjust the amount of space to the left */
+}
+
 	  #searchTicker{
   display: none; /* Show day ticker by default */
       position: fixed;
@@ -2045,7 +2073,7 @@ crossorigin="anonymous"></script>
 <!-- Region Select button -->
 <button id="regionSelectBtn">Region Select</button>
 
-
+<div id="topLeftLabel">Airbnb Explorer</div>
 <!-- Tickers -->
   <iframe
     id="dayTicker"
@@ -3350,6 +3378,12 @@ nightTexture.anisotropy = renderer.capabilities.getMaxAnisotropy(); // Increases
   searchBtn.style.backgroundColor = '#00aaff';
     const regionPopupButton = document.querySelector('#regionPopup button'); // Selects the button inside #regionPopup
 regionPopupButton.style.backgroundColor = '#00aaff';
+const loginButton = document.getElementById('loginButton');
+loginButton.style.backgroundColor = '#00aaff';
+const likedPostsButton = document.getElementById('likedPostsButton');
+likedPostsButton.style.backgroundColor = '#00aaff';
+const topLeftLabel = document.getElementById('topLeftLabel');
+topLeftLabel.style.backgroundColor = '#00aaff';
 // Add styles to inputs and selects on focus and hover
 const header = document.getElementById('header');
 const inputsAndSelects = header.querySelectorAll('input, select'); // Select all inputs and selects inside the header
@@ -3412,6 +3446,12 @@ inputsAndSelects.forEach((element) => {
   searchBtn.style.backgroundColor = '#ff385c';
     const regionPopupButton = document.querySelector('#regionPopup button'); // Selects the button inside #regionPopup
 regionPopupButton.style.backgroundColor = '#ff385c';
+const loginButton = document.getElementById('loginButton');
+loginButton.style.backgroundColor = '#ff385c';
+const likedPostsButton = document.getElementById('likedPostsButton');
+likedPostsButton.style.backgroundColor = '#ff385c';
+const topLeftLabel = document.getElementById('topLeftLabel');
+topLeftLabel.style.backgroundColor = '#ff385c';
 // Add styles to inputs and selects on focus and hover
 const header = document.getElementById('header');
 const inputsAndSelects = header.querySelectorAll('input, select'); // Select all inputs and selects inside the header
