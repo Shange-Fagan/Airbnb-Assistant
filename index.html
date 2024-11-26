@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Airbnb Explorer</title>
+  <title>Horizon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Stylesheets and scripts will be included here -->
@@ -76,13 +76,14 @@ a, button, input, select, iframe {
   font-size: 18px;
   font-weight: bold;
   color: white; /* Optional: make it stand out */
-  background-color: #ff385c; /* Airbnb's primary color */
+  background-color: #00aaff; /* Airbnb's primary color */
   padding: 5px 10px;
   text-align: center;
   justify-items: center;
   justify-content: center;
   display: flex; /* Use flexbox */
   align-items: center;
+  padding-right: 35px; /* Adjust the spacing on the left */
   padding-left: 0px; /* Adjust the spacing on the left */
   border-radius: 0px;
   z-index: 22012; /* Ensure it's above other content */
@@ -452,7 +453,7 @@ a, button, input, select, iframe {
 }
 /* Button Styling */
 #header .airbnb-button {
-    background-color: #ff385c; /* Airbnb red color */
+    background-color: #00aaff; /* Airbnb red color */
     border: none;
     padding: 10px 20px; /* Slightly smaller padding */
     border-radius: 50px; /* Fully rounded button */
@@ -471,7 +472,7 @@ a, button, input, select, iframe {
   justify-content: center;
   align-items: center;
 justify-content: center;
-    background-color: #ff385c; /* Airbnb red color */
+    background-color: #00aaff; /* Airbnb red color */
     border: none;
     padding: 8px 3px; /* Slightly smaller padding */
     border-radius: 50px; /* Fully rounded button */
@@ -480,7 +481,7 @@ justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 115, 187, 0.4), 0 1px 3px rgba(0, 115, 187, 0.12); /* Initial shadow */
+     /*box-shadow: 0 0 12px rgba(0, 255, 38, 0.8), 0 0 4px rgba(0, 255, 21, 0.5); /* Brighter, thinner, blue shadow */
     cursor: default;
 }
 .airbnb-button2 img {
@@ -489,7 +490,7 @@ justify-content: center;
 }
 
 #likedPostsButton {
-  background-color: #ff385c; /* Airbnb red */
+  background-color: #00aaff; /* Airbnb red */
   border: none;
   margin-left: 10px;
   width: 40px;
@@ -498,14 +499,9 @@ justify-content: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5); /* Brighter, thinner, blue shadow */
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#likedPostsButton:hover {
-  background-color: #e03a56; /* Darker shade on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 #likedPostsButton svg {
@@ -515,19 +511,48 @@ justify-content: center;
 
 
 
-#header button:hover {
-    background-color: #e03a56; /* Darker red on hover */
+#header .airbnb-button:hover {
+    background-color: #3ac635; /* Darker red on hover */
     box-shadow: 0 0 12px rgba(0, 115, 255, 0.8), 0 0 4px rgba(0, 115, 255, 0.5); /* Brighter, thinner, blue shadow */
     /*border: 2px solid rgba(0, 115, 255, 0.8);*/ /* Optional: Blue border to make it more pronounced */
-animation: pulseShadow 0.6s ease-in-out infinite alternate; /* Animation on hover */
+animation: pulseShadow1 0.6s ease-in-out infinite alternate; /* Animation on hover */
+}
+#header .airbnb-button2:hover {
+    background-color: #3ac635; /* Darker red on hover */
+    box-shadow: 0 0 12px rgba(0, 255, 38, 0.8), 0 0 4px rgba(0, 255, 21, 0.5); /* Brighter, thinner, blue shadow */
+    /*border: 2px solid rgba(0, 115, 255, 0.8);*/ /* Optional: Blue border to make it more pronounced */
+animation: pulseShadow2 0.6s ease-in-out infinite alternate; /* Animation on hover */
+}
+#likedPostsButton:hover {
+  background-color: #3ac635; /* Darker red on hover */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5); /* Brighter, thinner, blue shadow */
+    /*border: 2px solid rgba(0, 115, 255, 0.8);*/ /* Optional: Blue border to make it more pronounced */
+animation: pulseShadow3 0.6s ease-in-out infinite alternate; /* Animation on hover */
 }
 /* Keyframes for box shadow pulse animation */
-@keyframes pulseShadow {
+@keyframes pulseShadow1 {
+  0% {
+      box-shadow: 0 0 12px rgba(22, 171, 44, 0.8), 0 0 4px rgba(0, 255, 21, 0.371); /* Brighter, thinner, blue shadow */
+    }
+    100% {
+      box-shadow: 0 0 12px rgba(0, 255, 38, 0.8), 0 0 4px rgba(0, 255, 21, 0.5); /* Brighter, thinner, blue shadow */
+    }
+}
+
+@keyframes pulseShadow2 {
     0% {
         box-shadow: 0 0 12px rgba(0, 115, 255, 0.8), 0 0 4px rgba(0, 115, 255, 0.5);
     }
     100% {
         box-shadow: 0 0 20px rgba(0, 115, 255, 1), 0 0 8px rgba(0, 115, 255, 0.75); /* Pulsating effect */
+    }
+}
+@keyframes pulseShadow3 {
+  0% {
+        box-shadow: 0 0 12px rgba(110, 110, 110, 0.8), 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5);
     }
 }
 
@@ -740,7 +765,7 @@ input[type="number"] {
 }
 
 #regionPopup button {
-  background-color: #ff385c; /* Airbnb red */
+  background-color: #00aaff; /* Airbnb red */
   color: white;
   padding: 12px 25px;
   border: none;
@@ -751,7 +776,7 @@ input[type="number"] {
 }
 
 #regionPopup button:hover {
-  background-color: #e03a56; /* Slightly darker red on hover */
+  background-color: #007bff; /* Slightly darker red on hover */
 }
 
 	  #content {
@@ -1998,7 +2023,7 @@ crossorigin="anonymous"></script>
   </div>
 	<!-- Footer Section -->
   <footer>
-    © 2024 Airbnb Assistant. All rights reserved. 
+    © 2024 Horizon Flights. All rights reserved. 
     <a href="https://www.linkedin.com/in/shange-fagan-bba3a3239/" target="_blank">LinkedIn</a> | 
     <a href="mailto:yourname@gmail.com?subject=Inquiry&body=Hello, I would like to know more about your services." target="_blank">Contact Us</a>
   </footer>
@@ -2027,7 +2052,7 @@ crossorigin="anonymous"></script>
 </div>
 	
 <div id="regionPopup">
-  <h2>Welcome to Airbnb Assistant</h2>
+  <h2>Welcome to Horizon</h2>
   <p>Select your region</p>
   <select id="regionSelect">
     <option value="africa">Africa</option>
@@ -2073,7 +2098,11 @@ crossorigin="anonymous"></script>
 <!-- Region Select button -->
 <button id="regionSelectBtn">Region Select</button>
 
-<div id="topLeftLabel">Airbnb Explorer</div>
+<div id="topLeftLabel">
+  <img src="js/favicon-32x32.png" alt="Profile Icon" style="width: 24px; display:flex; align-items: center; height: 24px; margin-right: 8px;">
+  Latest Flights
+  <img src="js/300694_plane-plane-emoji-png-png-download (1).png" alt="Profile Icon" style="width: 24px; display:flex; align-items: center; height: 24px; margin-right: 8px;">
+</div>
 <!-- Tickers -->
   <iframe
     id="dayTicker"

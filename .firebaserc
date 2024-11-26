@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "airbnb-navigator"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }
